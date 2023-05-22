@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../Css/main.css'
 
 import {
   useColorModeValue,
@@ -56,18 +57,18 @@ const Navbar = () => {
       <Box
         display={{ base: isMobile ? 'block' : 'none', md: 'flex' }}
         width={{ base: 'full', md: 'auto' }}
-        // alignItems="left"
+       
         flexGrow={1}
-        // border='1px solid red'
+    
       >
         <Stack
-          //  border='1px solid red'
+   
           direction={{ base: 'column', md: 'row' }}
           spacing={{ base: 4, md: 8 }}
           align={{ base: 'center', md: 'center' }}
           pt={{ base: 4, md: 0 }}
         >
-          <Link href="#about" fontWeight="medium"  class="nav-link about">
+          <Link href="#about"  class="nav-link about">
             About
           </Link>
           <Link href="#projects" fontWeight="medium" class="nav-link projects"> 
