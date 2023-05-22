@@ -1,5 +1,9 @@
 
-.nav-linkabout{
-    font-size: 100rem;
-    font-weight: 900;
+.nav-link{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.about, .projects, .contact,.skills, .resume,.gitt{
+    font-size: 1.2rem;
+    font-weight: 500;
 }

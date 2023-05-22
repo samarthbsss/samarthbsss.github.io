@@ -54,7 +54,7 @@ const Body = () => {
             // ml={3}
             className="box"
           >
-            {/* <Image  class="home-img"/> */}
+            <Image  class="home-img"/>
             <Image
              
               boxShadow="2xl"

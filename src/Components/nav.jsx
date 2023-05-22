@@ -62,13 +62,13 @@ const Navbar = () => {
     
       >
         <Stack
-   
+          //  border='1px solid red'
           direction={{ base: 'column', md: 'row' }}
           spacing={{ base: 4, md: 8 }}
           align={{ base: 'center', md: 'center' }}
           pt={{ base: 4, md: 0 }}
         >
-          <Link href="#about"  class="nav-link about">
+          <Link href="#about" fontWeight="medium"  as='h3' class="nav-link about">
             About
           </Link>
           <Link href="#projects" fontWeight="medium" class="nav-link projects"> 
@@ -80,7 +80,7 @@ const Navbar = () => {
           <Link href="#skills" fontWeight="medium"  class="nav-link skills" >
             Skills
           </Link>
-          <Link href="#git" fontWeight="medium">
+          <Link href="#git" fontWeight="medium" class="gitt">
             Git
           </Link>
           <Link
