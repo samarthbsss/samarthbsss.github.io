@@ -75,7 +75,7 @@ const About = () => {
             challenging projects.
             <br />
             including javascript, nodejs, express.js, MongoDb, Websockets,
-            Redis, MySql, Typescript and AWS.
+            Redis, Typescript and AWS.
           </Text>
         </Box>
       </Box>
