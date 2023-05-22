@@ -41,7 +41,9 @@ const Navbar = () => {
       id="nav-menu"
     >
       <Box>
-        <Link href="/" fontSize="2xl" fontWeight="bold" class="nav-link home">
+        <Link href="/" fontSize="2xl" fontWeight="bold" 
+        class="nav-link home"
+        >
           Samarth
         </Link>
       </Box>
@@ -68,7 +70,7 @@ const Navbar = () => {
           align={{ base: 'center', md: 'center' }}
           pt={{ base: 4, md: 0 }}
         >
-          <Link href="#about" fontWeight="medium"  as='h3' class="nav-link about">
+          <Link href="#about" fontWeight="medium" class="nav-link about">
             About
           </Link>
           <Link href="#projects" fontWeight="medium" class="nav-link projects"> 

@@ -16,7 +16,7 @@ import Typewriter from 'typewriter-effect';
 // import profile from '../Images/profile.jpg'
 import profile from '../Images/removal.png';
 import '../Css/body.css';
-// import { Button } from 'react-scroll';
+
 
 const Body = () => {
   const bgColor = useColorModeValue('light.bg', 'dark.bg');
@@ -26,9 +26,16 @@ const Body = () => {
     fontWeight: '600',
     fontSize: '30px',
   };
+
+  const handleButtonClick = () => {
+    
+    window.location.href ='src/Projectimg/Samarth-B-S-Resume.pdf';
+  };
+
+
   return (
     <>
-      <Box bg={bgColor} color={textColor} w="100%">
+      <Box bg={bgColor} color={textColor} w="100%" >
         <Flex
           mb="7rem"
           p={{ base: '1rem', md: '5rem' }}
@@ -127,7 +134,7 @@ const Body = () => {
                 user experiences.
               </Text>
 
-              <HStack spacing={4} gap={2} p={3}>
+              <HStack spacing={4} gap={2} p={3} border='1px solid red'>
                 <Link
                   href="https://github.com/samarthbsss"
                   target="_blank"
@@ -152,17 +159,9 @@ const Body = () => {
                 <Link href="tel:+8792801332" target="_blank" id="contact-email">
                   <Icon as={FaPhone} boxSize={6} />
                 </Link>
-{/*                 
-                <Link>
-                <Button id="resume-button-1" varient='ghost'>
-                  Resume
-                </Button>
-                </Link> */}
-                 {/* <Link>
-                <Button id="resume-button-2" varient='ghost'>
-                  Resume
-                </Button>
-                </Link> */}
+                <button id="resume-button-1" onClick={handleButtonClick} width='20%' height='20%' >
+      Open Resume
+    </button>
               </HStack>
 
             </VStack>
