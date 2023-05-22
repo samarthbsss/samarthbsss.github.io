@@ -3,6 +3,7 @@ import { useColorModeValue, Box, Image, Text, Heading } from '@chakra-ui/react';
 // import gif from '../Images/gif.gif';
 import coding from '../Images/coding.gif';
 // import work from '../Images/work.gif';
+import '../Css/main.css'
 
 const About = () => {
   const bgColor = useColorModeValue('light.bg', 'nav.bg');
@@ -21,12 +22,12 @@ const About = () => {
         padding="4rem"
         mt={2}
         mr={3}
-        id="about"
+      
         // border="1px solid red"
         width="100%"
         height="100%"
         display={{ base: 'block', md: 'flex' }}
-        class="about section"
+        id="about"
       >
         <Image
           src={coding}
