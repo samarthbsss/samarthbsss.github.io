@@ -1,0 +1,4 @@
+.gitcal, .gitlang:hover{
+    scale: 1.1;
+    transition: 0.5s;
+}
