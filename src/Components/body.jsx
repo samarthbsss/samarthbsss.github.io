@@ -17,7 +17,6 @@ import Typewriter from 'typewriter-effect';
 import profile from '../Images/removal.png';
 import '../Css/body.css';
 
-
 const Body = () => {
   const bgColor = useColorModeValue('light.bg', 'dark.bg');
   const textColor = useColorModeValue('light.text', 'dark.text');
@@ -28,22 +27,21 @@ const Body = () => {
   };
 
   const handleButtonClick = () => {
-    
-    window.location.href ='src/Projectimg/Samarth-B-S-Resume.pdf';
+    window.location.href = 'src/Projectimg/Samarth-B-S-Resume.pdf';
   };
-
 
   return (
     <>
-      <Box bg={bgColor} color={textColor} w="100%" >
+      <Box bg={bgColor} color={textColor} w="100%">
         <Flex
-          mb="7rem"
+          mb="2rem"
           p={{ base: '1rem', md: '5rem' }}
           // p='5rem'
           alignContent="center"
-          justifyContent="center"
+          justifyContent="space-around"
           display={{ base: 'block', md: 'flex' }}
           mt={{ base: '5rem', md: '5rem' }}
+         
         >
           <Box
             display="flex"
@@ -52,24 +50,19 @@ const Body = () => {
             position="relative"
             // p={{ base: '1rem', md: '5rem' }}
             p={1}
-            // m={10}
-            // border='1px solid red'
             width="20%"
-            // width="100%"
             height="20%"
             borderRadius="full"
-            // ml={3}
             className="box"
+         
           >
-            <Image  class="home-img"/>
+            <Image class="home-img" />
             <Image
-             
               boxShadow="2xl"
               width="100%"
               height="100%"
               borderRadius="full"
-              // border='1px solid red'
-              // boxSize="20rem"
+           
               src={profile}
               alt="MyProfile"
               objectFit="cover"
@@ -77,13 +70,15 @@ const Body = () => {
 
               zIndex={0}
               transition="transform 0.3s ease"
-             
             />
           </Box>
           <Box
-            p={4}
-            ml={3}
-            m={5}
+            p={1}
+            // ml={3}
+            ml={{ base: '5rem', md: '1rem' }}
+            m={3}
+            w='60%'
+            h='60%'
             display="flex"
             alignContent="center"
             justifyContent="center"
@@ -91,10 +86,9 @@ const Body = () => {
           >
             <VStack
               align="start"
-              // border='1px solid red'
-              p={1}
+              // p={1}
             >
-              <Text fontSize="md" fontWeight="bold" p={1}>
+              <Text fontSize="md" fontWeight="bold">
                 HEY
                 <span className="wave">👋</span>, I AM
               </Text>
@@ -121,49 +115,45 @@ const Body = () => {
                   }}
                 />
               </div>
-              {/* <Text fontSize="xl" fontWeight="medium">
-                Full Stack Developer
-              </Text> */}
+          
               <Text fontSize="md" color={primeColor} id="user-detail-intro">
                 A Full-Stack Web Developer based in India,
-                <br />
-                working on frontend and backend technologies including
-                JavaScript, typescript, <br />
+               
+                working on frontend and  <br />backend technologies including
+                JavaScript, typescript, 
                 React, Redux, MongoDB, Express and NodeJS.
                 <br />I like to craft solid and scalable products with great
                 user experiences.
               </Text>
 
-              <HStack spacing={4} gap={2} p={3} >
-                <Link
-                  href="https://github.com/samarthbsss"
-                  target="_blank"
-                  
-                >
+              <HStack spacing={4} gap={2} p={3}>
+                <Link href="https://github.com/samarthbsss" target="_blank">
                   <Icon as={FaGithub} boxSize={6} />
                 </Link>
                 <Link
                   href="https://www.linkedin.com/in/samarthbsacharya/"
                   target="_blank"
-                  
                 >
                   <Icon as={FaLinkedin} boxSize={6} />
                 </Link>
                 <Link
                   href="mailto:samarthbsacharya@example.com"
                   target="_blank"
-                 
                 >
                   <Icon as={FaEnvelope} boxSize={6} />
                 </Link>
-                <Link href="tel:+8792801332" target="_blank" >
+                <Link href="tel:+8792801332" target="_blank">
                   <Icon as={FaPhone} boxSize={6} />
                 </Link>
-                <button id="resume-button-1" onClick={handleButtonClick} width='20%' height='20%' >
-      Open Resume
-    </button>
+                <button
+                  id="resume-button-1"
+                  onClick={handleButtonClick}
+                  width="20%"
+                  height="20%"
+                >
+                  Open Resume
+                </button>
               </HStack>
-
             </VStack>
           </Box>
         </Flex>

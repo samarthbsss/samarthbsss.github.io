@@ -1,7 +1,7 @@
 import React from 'react';
 import { useColorModeValue, Box, Image, Text, Heading } from '@chakra-ui/react';
-
-import coding from '../Images/coding.gif';
+import about from '../Images/aboutme.png'
+// import coding from '../Images/coding.gif';
 
 import '../Css/main.css';
 
@@ -20,7 +20,10 @@ const About = () => {
         display={{ base: 'block', md: 'flex' }}
         id="about"
       >
-        <Image src={coding} borderRadius="50%" ml={3} />
+        <Box h='60%' w='60%'> 
+        <Image src={about} borderRadius="50%" ml={3} />
+
+        </Box>
         <Box padding="4rem ">
           <Heading color={bgColor} size="2xl" textAlign="center">
             About me

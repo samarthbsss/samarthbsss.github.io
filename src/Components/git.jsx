@@ -15,15 +15,17 @@ const Git = () => {
         <Heading as="h2" size="2xl" textAlign="center" mb={12} color={bgColor}>
           My GitHub Contribution
         </Heading>
-        {/* <Text  align='center' fontSize='4xl' padding={4}>My GitHub Contribution</Text> */}
         <Flex alignContent="center" justifyContent="center" gap={4}>
           <Image
-            className="gitlang"
+            // className="gitlang"
+            id="github-streak-stats"
+          
             src="https://github-readme-stats.vercel.app/api?username=samarthbsss&theme=dark&hide_border=true&include_all_commits=false&count_private=true"
           />
           <Box>
             <Image
-              className="gitlang"
+            id="github-top-langs"
+              // className="gitlang"
               src="https://github-readme-streak-stats.herokuapp.com/?user=samarthbsss&theme=dark&hide_border=true"
             />
           </Box>
@@ -54,7 +56,7 @@ const Git = () => {
           <br></br>
         </div>
         <div
-          className="gitlang"
+          // className="gitlang"
           style={{
             display: 'flex',
             alignContent: 'center',
@@ -62,6 +64,7 @@ const Git = () => {
           }}
         >
           <img
+            id="github-stats-card"
             src="https://github-readme-stats.vercel.app/api/top-langs/?username=samarthbsss&theme=dark&hide_border=true&include_all_commits=false&count_private=true&layout=compact"
             alt="most used"
           />

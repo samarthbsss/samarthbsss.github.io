@@ -13,6 +13,6 @@
   .heart-beat {
     color:red;
     display: inline-block;
-  animation: heartbeat 1s infinite;
-  vertical-align: middle;
+    animation: heartbeat 2s infinite;
+    vertical-align: middle;
   }

@@ -64,7 +64,7 @@ function Projects() {
                     icon={<FiGithub />}
                     aria-label="GitHub Link"
                     variant="ghost"
-                    class="project-github-link"
+                    // class="project-github-link"
                   />
                 </Link>
                 <Link
