@@ -92,7 +92,7 @@ const Body = () => {
                 HEY
                 <span className="wave">👋</span>, I AM
               </Text>
-              <Text fontSize="4xl" fontWeight="medium" id="user-detail-name">
+              <Text fontSize="4xl" fontWeight="medium" id="user-detail-name" >
                 Samarth B S
               </Text>
               <div style={typestyle}>
@@ -116,7 +116,7 @@ const Body = () => {
                 />
               </div>
           
-              <Text fontSize="md" color={primeColor} id="user-detail-intro">
+              <Text fontSize="md" color={primeColor} id="user-detail-intro" >
                 A Full-Stack Web Developer based in India,
                
                 working on frontend and  <br />backend technologies including

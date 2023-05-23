@@ -59,12 +59,15 @@ function Projects() {
                   href="https://github.com/thisiskmv/Spotify-Clone"
                   target="_blank"
                   isExternal
+                  class="project-github-link"
                 >
                   <IconButton
                     icon={<FiGithub />}
                     aria-label="GitHub Link"
                     variant="ghost"
-                    // class="project-github-link"
+                
+                    // border='1px solid black'
+                    // padding='10px'
                   />
                 </Link>
                 <Link
@@ -106,6 +109,7 @@ function Projects() {
                   href="https://github.com/Vishalll069/Myntra-Clone"
                   target="_blank"
                   isExternal
+                  class="project-github-link"
                 >
                   <IconButton
                     icon={<FiGithub />}
@@ -149,6 +153,7 @@ function Projects() {
                   href="https://github.com/samarthbsss/Ajio-Clone"
                   target="_blank"
                   isExternal
+                  class="project-github-link"
                 >
                   <IconButton
                     icon={<FiGithub />}
