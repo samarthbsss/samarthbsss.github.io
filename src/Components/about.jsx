@@ -10,19 +10,19 @@ const About = () => {
   return (
     <>
       <Box
-        alignContent="center"
-        justifyContent="space-around"
-        padding="4rem"
+        alignContent={"center"}
+        justifyContent={"space-around"}
+        padding={"4rem"}
         mt={2}
         mr={3}
-        width="100%"
-        height="100%"
+        width={"100%"}
+        height={"100%"}
         display={{ base: 'block', md: 'flex' }}
         id="about"
         class="about section"
       >
         <Box h='60%' w='60%'> 
-        <Image src={about} borderRadius="50%" ml={3} />
+        <Image src={about} borderRadius={"50%"} ml={3} />
 
         </Box>
         <Box padding="4rem ">
