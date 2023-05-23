@@ -15,7 +15,7 @@ import TechStacks from './teck';
 const Home = () => {
   return (
     <>
-      <Box id="home" position="relative">
+      <Box  position="relative">
         <Body />
         <About />
         {/* <ProfilePage/> */}

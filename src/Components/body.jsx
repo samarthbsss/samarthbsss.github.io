@@ -34,7 +34,7 @@ const Body = () => {
 
   return (
     <>
-      <Box bg={bgColor} color={textColor} w="100%">
+      <Box bg={bgColor} color={textColor} w={"100%"} id='home'>
         <Flex
           mb="2rem"
           p={{ base: '1rem', md: '5rem' }}
@@ -43,7 +43,7 @@ const Body = () => {
           justifyContent="space-around"
           display={{ base: 'block', md: 'flex' }}
           mt={{ base: '5rem', md: '5rem' }}
-         
+
         >
           <Box
             display={"flex"}
