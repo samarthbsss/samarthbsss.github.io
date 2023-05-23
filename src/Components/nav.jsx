@@ -86,7 +86,7 @@ const Navbar = () => {
             Git
           </Link>
           <Link
-            href="https://drive.google.com/file/d/1jJgc5l24jQFELgsVzcxbbrViNVTSopeb/view"
+            href="https://www.dropbox.com/s/c1dhnaj5tp7hnf2/Samarth-B-S-Resume.pdf?dl=0"
             fontWeight="medium"
             target="_blank"
             class="nav-link resume"

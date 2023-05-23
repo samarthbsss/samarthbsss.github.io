@@ -58,7 +58,7 @@ const Body = () => {
             className="box"
          
           >
-            <Image class="home-img" />
+            <img class="home-img" alt=''/>
             <Image
               boxShadow="2xl"
               width="100%"
@@ -69,6 +69,7 @@ const Body = () => {
               alt="MyProfile"
               objectFit="cover"
               // position="absolute"
+             
 
               zIndex={0}
               transition="transform 0.3s ease"
