@@ -2,6 +2,7 @@ import React from 'react';
 import { useColorModeValue, Box, Image, Text, Heading } from '@chakra-ui/react';
 import about from '../Images/aboutme.png'
 // import coding from '../Images/coding.gif';
+// import AOS from "aos";
 
 import '../Css/main.css';
 
@@ -19,7 +20,8 @@ const About = () => {
         height={"100%"}
         display={{ base: 'block', md: 'flex' }}
         id="about"
-        class="about section"
+        class="about section sections"
+      
       >
         <Box h='60%' w='60%'> 
         <Image src={about} borderRadius={"50%"} ml={3} />

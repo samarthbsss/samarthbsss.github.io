@@ -8,6 +8,7 @@ const Git = () => {
   const bgColor = useColorModeValue('light.bg', 'nav.bg');
   // const textColor = useColorModeValue('light.text', 'dark.text');
   // const primeColor = useColorModeValue('light.primary', 'dark.primary');
+  
 
   return (
     <>
@@ -45,13 +46,22 @@ const Git = () => {
           <GitHubCalendar
             username="samarthbsss"
             style={{
-              // background: 'transparent',
+              background: 'transparent',
               text: '#333',
               // grade4: 'green',
               // grade3: 'green',
               // grade2: 'yellowgreen',
               // grade1: 'orange',
               // grade0: 'red',
+
+              // background: 'transparent',
+              // text: textColor,
+              // grade0: '#e4e7ec',
+              // grade1: '#cfd3da',
+              // grade2: '#b7bec9',
+              // grade3: '#8d96a3',
+              // grade4: '#6e7681',
+         
             }}
           />
           <br></br>
