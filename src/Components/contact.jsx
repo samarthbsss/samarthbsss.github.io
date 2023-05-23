@@ -163,7 +163,7 @@ const Contact = () => {
               <Icon as={FaLinkedin} boxSize={6} />
             </Link>
 
-            <Link href="mailto:samarthbsacharya@example.com" target="_blank">
+            <Link href="mailto:samarthbsacharya@example.com" target="_blank"  id="contact-email">
               <Icon as={FaEnvelope} boxSize={6} />
             </Link>
             <Link href="tel:+8792801332" target="_blank"  id="contact-phone">
