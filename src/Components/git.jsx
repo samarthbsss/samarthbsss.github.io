@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Image, Heading, useColorModeValue } from '@chakra-ui/react';
+import { Box, Flex,  Heading, useColorModeValue } from '@chakra-ui/react';
 import GitHubCalendar from 'react-github-calendar';
 import '../Css/git.css';
 
@@ -16,22 +16,23 @@ const Git = () => {
           My GitHub Contribution
         </Heading>
         <Flex alignContent="center" justifyContent="center" gap={4}>
-          <Image
+          <img
             // className="gitlang"
             id="github-streak-stats"
-          
+            alt='streak'
             src="https://github-readme-stats.vercel.app/api?username=samarthbsss&theme=dark&hide_border=true&include_all_commits=false&count_private=true"
           />
           <Box>
-            <Image
+            <img
             id="github-top-langs"
               // className="gitlang"
               src="https://github-readme-streak-stats.herokuapp.com/?user=samarthbsss&theme=dark&hide_border=true"
+              alt='githubtop'
             />
           </Box>
         </Flex>
         <div
-          className="gitcal"
+          // className="gitcal"
           style={{
             padding: '2rem',
             marginLeft: '4rem',

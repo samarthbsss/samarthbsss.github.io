@@ -19,6 +19,7 @@ const About = () => {
         height="100%"
         display={{ base: 'block', md: 'flex' }}
         id="about"
+        class="about section"
       >
         <Box h='60%' w='60%'> 
         <Image src={about} borderRadius="50%" ml={3} />
@@ -35,7 +36,7 @@ const About = () => {
             height="100%"
             m={2}
             p={3}
-            class="about section"
+           
           >
             Full-stack web developer specializing in the MERN stack.
             <br />
