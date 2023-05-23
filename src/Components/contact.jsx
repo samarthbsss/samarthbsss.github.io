@@ -145,7 +145,7 @@ const Contact = () => {
             justifyContent="center"
             alignContent="center"
           >
-            <Link href="https://github.com/samarthbsss" target="_blank">
+            <Link href="https://github.com/samarthbsss" target="_blank"  id="contact-github">
               <Icon
                 as={FaGithub}
                 boxSize={6}
@@ -158,13 +158,15 @@ const Contact = () => {
             <Link
               href="https://www.linkedin.com/in/samarthbsacharya/"
               target="_blank"
+              id="contact-linkedin"
             >
               <Icon as={FaLinkedin} boxSize={6} />
             </Link>
+
             <Link href="mailto:samarthbsacharya@example.com" target="_blank">
               <Icon as={FaEnvelope} boxSize={6} />
             </Link>
-            <Link href="tel:+8792801332" target="_blank">
+            <Link href="tel:+8792801332" target="_blank"  id="contact-phone">
               <Icon as={FaPhone} boxSize={6} />
             </Link>
           </HStack>

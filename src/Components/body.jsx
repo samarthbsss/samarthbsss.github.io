@@ -134,29 +134,29 @@ const Body = () => {
                 user experiences.
               </Text>
 
-              <HStack spacing={4} gap={2} p={3} border='1px solid red'>
+              <HStack spacing={4} gap={2} p={3} >
                 <Link
                   href="https://github.com/samarthbsss"
                   target="_blank"
-                  id="contact-github"
+                  
                 >
                   <Icon as={FaGithub} boxSize={6} />
                 </Link>
                 <Link
                   href="https://www.linkedin.com/in/samarthbsacharya/"
                   target="_blank"
-                  id="contact-linkedin"
+                  
                 >
                   <Icon as={FaLinkedin} boxSize={6} />
                 </Link>
                 <Link
                   href="mailto:samarthbsacharya@example.com"
                   target="_blank"
-                  id="contact-phone"
+                 
                 >
                   <Icon as={FaEnvelope} boxSize={6} />
                 </Link>
-                <Link href="tel:+8792801332" target="_blank" id="contact-email">
+                <Link href="tel:+8792801332" target="_blank" >
                   <Icon as={FaPhone} boxSize={6} />
                 </Link>
                 <button id="resume-button-1" onClick={handleButtonClick} width='20%' height='20%' >
