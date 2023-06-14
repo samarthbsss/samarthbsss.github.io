@@ -10,15 +10,19 @@ import {
   Heading,
   useColorModeValue,
 } from '@chakra-ui/react';
+
 import { FiGithub, FiEye, FiMoreHorizontal } from 'react-icons/fi';
-import myntra from '../Projectimg/Myntra.png';
-import spotify from '../Projectimg/spotify.png';
-import ajio from '../Projectimg/ajio.png';
+import data from '../Json/project.json';
+// import myntra from '../Projectimg/Myntra.png';
+// import spotify from '../Projectimg/spotify.png';
+// import ajio from '../Projectimg/ajio.png';
 
 function Projects() {
   const bgColor = useColorModeValue('light.bg', 'dark.bg');
   const textColor = useColorModeValue('light.text', 'dark.text');
   const primeColor = useColorModeValue('light.primary', 'dark.primary');
+ 
+
   return (
     <Box
       width="100%"
@@ -32,7 +36,7 @@ function Projects() {
       <Heading as="h2" size="2xl" textAlign="center" mb={12} p="2rem">
         Projects
       </Heading>
-      <Grid
+      {/* <Grid
         templateColumns={{
           base: 'repeat(1, 1fr)',
 
@@ -139,7 +143,6 @@ function Projects() {
             </Box>
           </Box>
         </GridItem>
-   
         <GridItem>
           <Box class="project-card" borderWidth="1px" borderRadius="lg" overflow="hidden">
             <Image src={ajio} alt="Project 4" />
@@ -183,41 +186,65 @@ function Projects() {
             </Box>
           </Box>
         </GridItem>
-             {/* <GridItem>
-          <Box class="project-card" borderWidth="1px" borderRadius="lg" overflow="hidden">
-            <Image src="/project3.jpg" alt="Project 3" />
-            <Box p={4}>
+      </Grid> */}
+    
+      <Grid templateColumns={{base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)',}}
+        gap={10}
+        mr={6}
+        ml={6}>  
+          {
+            data.map((card,id)=>{
+              return <GridItem key={card.key}>
+                  <Box  class="project-card" borderWidth="1px" borderRadius="lg" overflow="hidden">
+                  <Image src={require(`../Projectimg/${card.image}`)} alt=''/>
+                  <Box p={4}>
               <Text fontWeight="bold" fontSize="xl" mb={2}>
-                Project 3
+                {card.projectTitle}
               </Text>
-              <Text mb={4}>Short description of Project 3 goes here.</Text>
-              <Flex justifyContent="space-between">
-                <Link href="#" isExternal>
+              <Text mb={4} color={primeColor}>{card.projectInfo}</Text>
+              <Flex justifyContent="space-around">
+                <Link
+                  href={card.gitlink}
+                  target="_blank"
+                  isExternal
+                  class="project-github-link"
+                >
                   <IconButton
                     icon={<FiGithub />}
                     aria-label="GitHub Link"
                     variant="ghost"
                   />
                 </Link>
-                <Link href="#" isExternal>
+                <Link
+                  href={card.link}
+                  target="_blank"
+                  isExternal
+                >
                   <IconButton
                     icon={<FiEye />}
                     aria-label="View Project Link"
                     variant="ghost"
                   />
                 </Link>
-                <Link href="#" isExternal>
+                {/* <Link href="#" isExternal>
                   <IconButton
                     icon={<FiMoreHorizontal />}
                     aria-label="More Link"
                     variant="ghost"
                   />
-                </Link>
+                </Link> */}
               </Flex>
-            </Box>
-          </Box>
-        </GridItem> */}
+
+                  </Box>
+                  </Box>
+
+                  
+              </GridItem>
+            })
+          }
+
       </Grid>
+
     </Box>
   );
 }

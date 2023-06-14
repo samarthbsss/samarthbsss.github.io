@@ -15,7 +15,7 @@ import TechStacks from './teck';
 const Home = () => {
   return (
     <>
-      <Box  position="relative">
+      <Box position="relative">
         <Body />
         <About />
         {/* <ProfilePage/> */}
@@ -23,7 +23,7 @@ const Home = () => {
         <TechStacks />
         <Git />
         <Contact />
-        = <Footer />
+        <Footer />
       </Box>
       <Navbar />
       <ScrollToTopButton />
