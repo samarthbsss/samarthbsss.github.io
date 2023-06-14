@@ -11,7 +11,9 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
-import { FiGithub, FiEye, FiMoreHorizontal } from 'react-icons/fi';
+import { FiGithub, FiEye, 
+  // FiMoreHorizontal 
+} from 'react-icons/fi';
 import data from '../Json/project.json';
 // import myntra from '../Projectimg/Myntra.png';
 // import spotify from '../Projectimg/spotify.png';
@@ -195,13 +197,20 @@ function Projects() {
           {
             data.map((card,id)=>{
               return <GridItem key={card.key}>
-                  <Box  class="project-card" borderWidth="1px" borderRadius="lg" overflow="hidden">
+                <div class="project-card">
+                  <div class="project-title"></div>
+                  <div class="project-description"></div>
+                  <div class="project-tech-stack"></div>
+                  <div class="project-github-link"></div>
+                  <div class="project-deployed-link"></div>
+                </div>
+                  <Box borderWidth="1px" borderRadius="lg" overflow="hidden">
                   <Image src={require(`../Projectimg/${card.image}`)} alt=''/>
                   <Box p={4}>
-              <Text fontWeight="bold" fontSize="xl" mb={2}>
+              <Text fontWeight={"bold"} fontSize={"xl" } mb={'2'}  >
                 {card.projectTitle}
               </Text>
-              <Text mb={4} color={primeColor}>{card.projectInfo}</Text>
+              <Text mb={4} color={primeColor} >{card.projectInfo}</Text>
               <Flex justifyContent="space-around">
                 <Link
                   href={card.gitlink}
