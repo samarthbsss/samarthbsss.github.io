@@ -58,7 +58,7 @@ const Body = () => {
             className="box"
          
           >
-            <img class="home-img" alt=''/>
+            <img class="home-img" alt='' src=''/>
             <Image
               boxShadow="2xl"
               width="100%"
@@ -86,7 +86,7 @@ const Body = () => {
             alignContent={"center"}
             justifyContent={"center"}
             // border='1px solid red'
-            id="user-detail-name"
+            // id="user-detail-name"
           >
             <VStack
               align="start"
@@ -96,10 +96,10 @@ const Body = () => {
                 HEY
                 <span className="wave">👋</span>, I AM
               </Text>
-              <Text fontSize="4xl" fontWeight="medium" >
+              <Text fontSize="4xl" fontWeight="medium" id="user-detail-name">
                 Samarth B S
               </Text>
-              <div style={typestyle}  id="user-detail-intro">
+              <div style={typestyle}  >
                 <Typewriter
                   options={{
                     loop: true,
@@ -120,7 +120,7 @@ const Body = () => {
                 />
               </div>
           
-              <Text fontSize="md" color={primeColor} >
+              <Text fontSize="md" color={primeColor} id="user-detail-intro" >
                 A Full-Stack Web Developer based in India,
                
                 working on frontend and  <br />backend technologies including

@@ -20,7 +20,7 @@ const About = () => {
         height={"100%"}
         display={{ base: 'block', md: 'flex' }}
         id="about"
-        class="about section sections"
+        className="about section sections"
       
       >
         <Box h='60%' w='60%'> 
