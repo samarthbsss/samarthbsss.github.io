@@ -22,6 +22,7 @@ import profile from '../Images/removal.png';
 import '../Css/body.css';
 
 const resume =require('../Projectimg/Samarth-B-S-Resume.pdf')
+
 const Body = () => {
   const bgColor = useColorModeValue('light.bg', 'dark.bg');
   const textColor = useColorModeValue('light.text', 'dark.text');
@@ -153,32 +154,35 @@ const Body = () => {
                 {/* button space */}
                 <ButtonGroup spacing={"5"}>
                       <Button
+                        id="resume-button-1"
+                        as={"a"}
+                        variant={"outline"}
+                        borderRadius={"0"}
+                        _hover={{ bg: "white", color: "#1B3C65" }}
+                        size={"xs"}
+                        href={resume} 
+                        // href ='../Projectimg/Samarth-B-S-Resume.pdf'
+                        target="_blank"
+                        rel="noreferrer"
+                        rightIcon={<AiOutlineDownload/>}
+                        // download='../Projectimg/Samarth-B-S-Resume.pdf'
+                        download={'Samarth-BS-Resume'}
+
+                      >
+                        Resume
+                      </Button>
+                      <Button
                         id="resume-button-2"
                         as={"a"}
                         variant={"outline"}
                         borderRadius={"0"}
                         _hover={{ bg: "white", color: "#1B3C65" }}
                         size={"xs"}
-                        href={resume}
-                        target="_blank"
-                        rel="noreferrer"
-                        rightIcon={<AiOutlineDownload/>}
-                        download={resume}
-
-                      >
-                        Resume
-                      </Button>
-                      <Button
-                        as={"a"}
-                        variant={"outline"}
-                        borderRadius={"0"}
-                        _hover={{ bg: "white", color: "#1B3C65" }}
-                        size={"xs"}
-                        href={'https://www.dropbox.com/s/c1dhnaj5tp7hnf2/Samarth-B-S-Resume.pdf?dl=0'}
+                        href='https://www.dropbox.com/s/c1dhnaj5tp7hnf2/Samarth-B-S-Resume.pdf?dl=0'
                         rel="noreferrer"
                         target="_blank"
                         rightIcon={<AiFillEye/>}
-                        
+                          
                       >
                         Resume
                       </Button>

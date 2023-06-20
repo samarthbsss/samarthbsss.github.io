@@ -87,9 +87,6 @@ const Contact = () => {
   };
 
   const handleSend = () => {
-    // setIsLoading(true);
-
-    // Simulating an API call
     setTimeout(() => {
       setIsLoading(false);
       setIsSent(true);
@@ -120,13 +117,14 @@ const Contact = () => {
       >
         <Box width="100%" height="45rem">
           <Image
-            src={isPlaying ? mes : send}
+            // src={isPlaying ? mes : send}
+            src={send}
             alt="Preview"
             height="100%"
             weight="100%"
             // borderRadius="full" // This sets the border radius to make it round
             // overflow="hidden" // This ensures the GIF stays within the rounded border
-            boxShadow="md" // This adds a shadow effect (optional)
+            // boxShadow="md" // This adds a shadow effect (optional)
             maxWidth="100%"
           />
         </Box>
@@ -158,16 +156,17 @@ const Contact = () => {
             <Link
               href="https://www.linkedin.com/in/samarthbsacharya/"
               target="_blank"
-              id="contact-linkedin"
+              
             >
-              <Icon as={FaLinkedin} boxSize={6} />
+              <Icon as={FaLinkedin} boxSize={6} id="contact-linkedin" />
             </Link>
 
-            <Link href="mailto:samarthbsacharya@example.com" target="_blank"  id="contact-email">
-              <Icon as={FaEnvelope} boxSize={6} />
+            <Link href="mailto:samarthbsacharya@example.com" target="_blank"  >
+              <Icon as={FaEnvelope} boxSize={6} id="contact-email"/>
             </Link>
-            <Link href="tel:+8792801332" target="_blank"  id="contact-phone">
-              <Icon as={FaPhone} boxSize={6} />
+            <Link href="tel:+8792801332" target="_blank" >
+              <div  id="contact-phone"></div>
+              <Icon as={FaPhone} boxSize={6}  />
             </Link>
           </HStack>
           <form onSubmit={handleSubmit}>

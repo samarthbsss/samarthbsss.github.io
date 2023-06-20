@@ -198,6 +198,7 @@ function Projects() {
             data.map((card,id)=>{
               return <GridItem key={card.key}>
                 <div class="project-card">
+                  <img src='' alt=''/>
                   <div class="project-title"></div>
                   <div class="project-description"></div>
                   <div class="project-tech-stack"></div>

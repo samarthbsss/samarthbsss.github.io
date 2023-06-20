@@ -86,6 +86,7 @@ const Navbar = () => {
             Git
           </Link>
           <Link
+            id="resume-button-1"
             href="https://www.dropbox.com/s/c1dhnaj5tp7hnf2/Samarth-B-S-Resume.pdf?dl=0"
             fontWeight="medium"
             target="_blank"
