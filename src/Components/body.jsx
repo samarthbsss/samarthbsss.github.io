@@ -154,7 +154,7 @@ const Body = () => {
                 {/* button space */}
                 <ButtonGroup spacing={"5"}>
                       <Button
-                        id="resume-button-1"
+                        // id="resume-button-1"
                         as={"a"}
                         variant={"outline"}
                         borderRadius={"0"}
@@ -182,7 +182,7 @@ const Body = () => {
                         rel="noreferrer"
                         target="_blank"
                         rightIcon={<AiFillEye/>}
-                          
+
                       >
                         Resume
                       </Button>

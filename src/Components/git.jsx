@@ -17,17 +17,19 @@ const Git = () => {
           My GitHub Contribution
         </Heading>
         <Flex alignContent="center" justifyContent="center" gap={4}>
+        {/* [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=samarthbsss)](https://git.io/streak-stats) */}
           <img
             // className="gitlang"
-            id="github-streak-stats"
+            id="github-stats-card"
             alt='streak'
             src="https://github-readme-stats.vercel.app/api?username=samarthbsss&theme=dark&hide_border=true&include_all_commits=false&count_private=true"
           />
           <Box>
             <img
-            id="github-top-langs"
+            id="github-streak-stats"
               // className="gitlang"
-              src="https://github-readme-streak-stats.herokuapp.com/?user=samarthbsss&theme=dark&hide_border=true"
+              // src="https://github-readme-streak-stats.herokuapp.com/?user=samarthbsss&theme=dark&hide_border=true"
+              src='https://github-readme-streak-stats.herokuapp.com?user=samarthbsss'
               alt='githubtop'
             />
           </Box>
@@ -75,7 +77,7 @@ const Git = () => {
           }}
         >
           <img
-            id="github-stats-card"
+            id="github-top-langs"
             src="https://github-readme-stats.vercel.app/api/top-langs/?username=samarthbsss&theme=dark&hide_border=true&include_all_commits=false&count_private=true&layout=compact"
             alt="most used"
           />
