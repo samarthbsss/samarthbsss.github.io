@@ -19,7 +19,7 @@ import {
   useToast,
   useColorModeValue,
 } from '@chakra-ui/react';
-import mes from '../Images/send.gif';
+// import mes from '../Images/send.gif';
 import send from '../Images/send.svg';
 // import {  animateScroll as scroll } from 'react-scroll';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
@@ -106,7 +106,9 @@ const Contact = () => {
       <Text align="center" fontSize="2xl">
         Got a question or proposal, or just want to say hello? Go ahead.
       </Text>
+    <div>
 
+   
       <Flex
         onMouseEnter={() => setIsPlaying(true)}
         onMouseLeave={() => setIsPlaying(false)}
@@ -122,9 +124,7 @@ const Contact = () => {
             alt="Preview"
             height="100%"
             weight="100%"
-            // borderRadius="full" // This sets the border radius to make it round
-            // overflow="hidden" // This ensures the GIF stays within the rounded border
-            // boxShadow="md" // This adds a shadow effect (optional)
+
             maxWidth="100%"
           />
         </Box>
@@ -156,19 +156,17 @@ const Contact = () => {
             <Link
               href="https://www.linkedin.com/in/samarthbsacharya/"
               target="_blank"
-              
+              id="contact-linkedin" 
             >
-              <Icon as={FaLinkedin} boxSize={6} id="contact-linkedin" />
+              <Icon as={FaLinkedin} boxSize={6}/>
             </Link>
-
-            <Link href="mailto:samarthbsacharya@example.com" target="_blank"  >
-              <Icon as={FaEnvelope} boxSize={6} id="contact-email"/>
-            </Link>
-            <Link href="tel:+8792801332" target="_blank" >
-              <div  id="contact-phone"></div>
-              <Icon as={FaPhone} boxSize={6}  />
-            </Link>
+           
+           
+         
           </HStack>
+
+          
+
           <form onSubmit={handleSubmit}>
             <FormControl>
               <FormLabel>Your Name</FormLabel>
@@ -227,6 +225,18 @@ const Contact = () => {
           </form>
         </Box>
       </Flex>
+      <div >
+            <a href="mailto: samarthbsacharya@gmail.com"id="contact-email" >
+            <Icon as={FaEnvelope} boxSize={6}/>
+            </a> 
+
+            </div>
+                <div  >
+                  <a href="tel:+8792801332" id="contact-phone"> 
+                  <Icon as={FaPhone} boxSize={6}/>
+                  </a>
+                </div>
+      </div>
     </>
   );
 };

@@ -31,7 +31,9 @@ const About = () => {
           <Heading color={bgColor} size="2xl" textAlign="center">
             About me
           </Heading>
+
           <Text
+          
             alignContent="center"
             justifyContent="center"
             width="100%"
@@ -42,9 +44,8 @@ const About = () => {
           >
             Full-stack web developer specializing in the MERN stack.
             <br />
-            Proficient in data structures and algorithms with strong
-            problem-solving skills.
-            <br />
+            <p id="user-detail-intro"  >         proficient in HTML5, CSS3, JavaScript, ReactJs, NodeJs, and Express, with a strong grasp of database technologies such as MongoDB.</p>
+         
             Hands-on experience building React apps in both front-end and
             back-end roles. Portfolio includes six major projects and 15+ mini
             projects,

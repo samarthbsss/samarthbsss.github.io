@@ -21,7 +21,7 @@ import profile from '../Images/removal.png';
 
 import '../Css/body.css';
 
-const resume =require('../Projectimg/Samarth-B-S-Resume.pdf')
+import resume from '../Projectimg/Samarth-B-S-Resume.pdf';
 
 const Body = () => {
   const bgColor = useColorModeValue('light.bg', 'dark.bg');
@@ -31,6 +31,11 @@ const Body = () => {
     fontWeight: '600',
     fontSize: '30px',
   };
+
+  const handleDownload = () => {
+    window.open(resume, '_blank');
+  };
+
 
 
   return (
@@ -87,7 +92,7 @@ const Body = () => {
             alignContent={"center"}
             justifyContent={"center"}
             // border='1px solid red'
-            // id="user-detail-name"
+          
           >
             <VStack
               align="start"
@@ -121,7 +126,9 @@ const Body = () => {
                 />
               </div>
           
-              <Text fontSize="md" color={primeColor} id="user-detail-intro" >
+              <Text fontSize="md" color={primeColor} 
+              // id="user-detail-intro"
+               >
                 A Full-Stack Web Developer based in India,
                
                 working on frontend and  <br />backend technologies including
@@ -154,12 +161,14 @@ const Body = () => {
                 {/* button space */}
                 <ButtonGroup spacing={"5"}>
                       <Button
-                        // id="resume-button-1"
+                       onClick={handleDownload}
+                        id="resume-button-2"
                         as={"a"}
                         variant={"outline"}
                         borderRadius={"0"}
                         _hover={{ bg: "white", color: "#1B3C65" }}
                         size={"xs"}
+                        // href='https://www.dropbox.com/s/c1dhnaj5tp7hnf2/Samarth-B-S-Resume.pdf?dl=0'
                         href={resume} 
                         // href ='../Projectimg/Samarth-B-S-Resume.pdf'
                         target="_blank"
@@ -172,7 +181,7 @@ const Body = () => {
                         Resume
                       </Button>
                       <Button
-                        id="resume-button-2"
+                        // id="resume-button-2"
                         as={"a"}
                         variant={"outline"}
                         borderRadius={"0"}
