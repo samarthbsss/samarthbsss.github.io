@@ -106,7 +106,7 @@ const Contact = () => {
       <Text align="center" fontSize="2xl">
         Got a question or proposal, or just want to say hello? Go ahead.
       </Text>
-    <div>
+    <div  id="contact">
 
    
       <Flex
@@ -115,7 +115,7 @@ const Contact = () => {
         alignContent="center"
         justifyContent="space-around"
         padding="2rem"
-        id="contact"
+       
       >
         <Box width="100%" height="45rem">
           <Image
@@ -225,14 +225,14 @@ const Contact = () => {
           </form>
         </Box>
       </Flex>
-      <div >
-            <a href="mailto: samarthbsacharya@gmail.com"id="contact-email" >
+      <div  >
+            <a href="mailto:samarthbsacharya@gmail.com" id="contact-email" target={"_blank"}>
             <Icon as={FaEnvelope} boxSize={6}/>
             </a> 
 
             </div>
                 <div  >
-                  <a href="tel:+8792801332" id="contact-phone"> 
+                  <a href="8792801332"  id="contact-phone" target={"_blank"}> 
                   <Icon as={FaPhone} boxSize={6}/>
                   </a>
                 </div>

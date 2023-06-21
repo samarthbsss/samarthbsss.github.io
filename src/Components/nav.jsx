@@ -13,6 +13,7 @@ import {
 // import { Link } from "react-scroll";
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
+import resume from '../Projectimg/Samarth-B-S-Resume.pdf';
 
 const Navbar = () => {
   // const { isOpen, onOpen, onClose } = useDisclosure();
@@ -23,6 +24,10 @@ const Navbar = () => {
 
   const toggleMobileNav = () => {
     setIsMobile(!isMobile);
+  };
+
+  const handleDownload = () => {
+    window.open(resume, '_blank');
   };
 
   return (
@@ -86,14 +91,21 @@ const Navbar = () => {
             Git
           </Link>
           <Link
-            id="resume-button-1"
-            href="https://www.dropbox.com/s/c1dhnaj5tp7hnf2/Samarth-B-S-Resume.pdf?dl=0"
+            id="resume-link-1"
+            onClick={handleDownload}
+            href={resume}
             fontWeight="medium"
             target="_blank"
             class="nav-link resume"
+            download={'Samarth-BS-Resume'}
+           rel="noreferrer"
           >
+            <button    id="resume-button-1">
             Resume
+            </button>
+          
           </Link>
+       
         </Stack>
       </Box>
       <ColorModeSwitcher justifySelf="flex-end" />

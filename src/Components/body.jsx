@@ -161,7 +161,7 @@ const Body = () => {
                 {/* button space */}
                 <ButtonGroup spacing={"5"}>
                       <Button
-                       onClick={handleDownload}
+                        //  onClick={handleDownload}
                         id="resume-button-2"
                         as={"a"}
                         variant={"outline"}
@@ -169,19 +169,29 @@ const Body = () => {
                         _hover={{ bg: "white", color: "#1B3C65" }}
                         size={"xs"}
                         // href='https://www.dropbox.com/s/c1dhnaj5tp7hnf2/Samarth-B-S-Resume.pdf?dl=0'
-                        href={resume} 
+                        // href={resume} 
                         // href ='../Projectimg/Samarth-B-S-Resume.pdf'
-                        target="_blank"
-                        rel="noreferrer"
+                        // target="_blank"
+                        // rel="noreferrer"
                         rightIcon={<AiOutlineDownload/>}
                         // download='../Projectimg/Samarth-B-S-Resume.pdf'
-                        download={'Samarth-BS-Resume'}
+                        // download={'Samarth-BS-Resume'}
 
                       >
+                        <Link     
+                         onClick={handleDownload}
+                        id="resume-link-2"      
+                         href={resume}
+                          target="_blank"
+                          rel="noreferrer"
+                          download={'Samarth-BS-Resume'}
+                        >
                         Resume
+                        </Link>
+                      
                       </Button>
-                      <Button
-                        // id="resume-button-2"
+                      {/* <Button
+                        // id="resume-button-1"
                         as={"a"}
                         variant={"outline"}
                         borderRadius={"0"}
@@ -194,7 +204,7 @@ const Body = () => {
 
                       >
                         Resume
-                      </Button>
+                      </Button> */}
                     </ButtonGroup>
                     {/* button ButtonGroup */}
               </HStack>
