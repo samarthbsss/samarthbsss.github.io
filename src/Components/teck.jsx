@@ -107,16 +107,6 @@ const TechStacks = () => {
   // );
 
   // Form hear
-
-
-
-
-
-
-
-
-
-
   const techStacks = [
     { name: 'HTML', imageSrc: 'https://img.icons8.com/color/512/html-5--v1.png' },
     { name: 'CSS', imageSrc: "https://img.icons8.com/fluency/512/css3.png"},
@@ -129,7 +119,7 @@ const TechStacks = () => {
     // { name: 'NPM', imageSrc: require('../Images/npm.png') },
     // { name: 'Postman', imageSrc: require('../Images/post.png') },
     // { name: 'Redux', imageSrc: require('../Images/redux.svg') },
-    { name: 'Bootstrap', imageSrc: "https://img.icons8.com/color/512/bootstrap.png" },
+    // { name: 'Bootstrap', imageSrc: "https://img.icons8.com/color/512/bootstrap.png" },
     {name: 'Mongo DB', imageSrc: 'https://img.icons8.com/color/512/mongodb.png'},
     {name : 'Java' , imageSrc:"https://img.icons8.com/?size=512&id=Pd2x9GWu9ovX&format=png"}
   ];
@@ -160,15 +150,15 @@ const TechStacks = () => {
     //     </div>
     //   </div>
     // </div>
-    <div style={{ width: "80%", margin: "15% auto", padding: "0% 10px" }}>
-  <div style={{ borderTop: "2px solid rgb(35, 53, 84)", textAlign: "center" }}>
+    <div style={{ width: "80%", margin: "15% auto", padding: "0% 10px" }} id='skills'>
+  <div style={{ textAlign: "center" }}>
     <h2 style={{ marginBottom: "12px" }}>
       Relevant Tech Stacks
     </h2>
     <div
       style={{
         display: "grid",
-        gridTemplateColumns: "repeat(6, 1fr)",
+        gridTemplateColumns: "repeat(5, 1fr)",
         gap: "20px",
         justifyContent: "center",
       }}
