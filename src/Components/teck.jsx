@@ -107,24 +107,36 @@ const TechStacks = () => {
   // );
 
   // Form hear
+
+
+
+
+
+
+
+
+
+
   const techStacks = [
-    { name: 'HTML', imageSrc: html },
-    { name: 'CSS', imageSrc: require('../Images/css.svg') },
-    { name: 'JavaScript', imageSrc: require('../Images/javascript.svg') },
-    { name: 'React', imageSrc: require('../Images/react.svg') },
-    { name: 'Chakra UI', imageSrc: require('../Images/chakra.jpg') },
-    { name: 'Express', imageSrc: require('../Images/express.jpg') },
-    { name: 'Node JS', imageSrc: require('../Images/nodejs.png') },
-    { name: 'Git', imageSrc: require('../Images/git.svg') },
-    { name: 'NPM', imageSrc: require('../Images/npm.png') },
-    { name: 'Postman', imageSrc: require('../Images/post.png') },
-    { name: 'Redux', imageSrc: require('../Images/redux.svg') },
-    { name: 'Bootstrap', imageSrc: require('../Images/boot.svg') },
+    { name: 'HTML', imageSrc: 'https://img.icons8.com/color/512/html-5--v1.png' },
+    { name: 'CSS', imageSrc: "https://img.icons8.com/fluency/512/css3.png"},
+    { name: 'JavaScript', imageSrc: "https://img.icons8.com/color/512/javascript.png" },
+    { name: 'React', imageSrc: "https://img.icons8.com/office/512/react.png" },
+    { name: 'Chakra UI', imageSrc: "https://img.icons8.com/color/512/chakra-ui.png" },
+    { name: 'Express', imageSrc: 'https://img.icons8.com/ios/512/express-js.png'},
+    { name: 'Node JS', imageSrc: "https://img.icons8.com/fluency/512/node-js.png"},
+    { name: 'Git', imageSrc: "https://img.icons8.com/glyph-neue/512/github.png" },
+    // { name: 'NPM', imageSrc: require('../Images/npm.png') },
+    // { name: 'Postman', imageSrc: require('../Images/post.png') },
+    // { name: 'Redux', imageSrc: require('../Images/redux.svg') },
+    { name: 'Bootstrap', imageSrc: "https://img.icons8.com/color/512/bootstrap.png" },
+    {name: 'Mongo DB', imageSrc: 'https://img.icons8.com/color/512/mongodb.png'},
+    {name : 'Java' , imageSrc:"https://img.icons8.com/?size=512&id=Pd2x9GWu9ovX&format=png"}
   ];
 
   return (
-    <div style={{ paddingTop: '8px', paddingBottom: '16px' }} id="skills">
-      <div style={{ maxWidth: '7xl', margin: 'auto' }}>
+    <div  sx={{ width: "80%", margin: "15% auto", padding: "0% 10px" }} id="skills">
+      <div sx={{ borderTop: "2px solid rgb(35,53,84)", position: "relative" }}>
         <h2 style={{ textAlign: 'center', marginBottom: '12px' }}>
           Relevant Tech Stacks
         </h2>

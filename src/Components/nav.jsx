@@ -132,7 +132,7 @@ const Navbar = () => {
            */}
           {/* </Link> */}
 
-          <div id="resume-button-1" onClick={handleDownload}>
+          <div id="resume-button-1" onClick={handleDownload}  class="nav-link resume">
               {/* <a id="resume-link-1" class="button button--flex" target="_blank"> */}
                 Resume
                 {/* <i class="uil uil-download-alt button__icon"> */}
