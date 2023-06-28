@@ -150,7 +150,7 @@ const TechStacks = () => {
     //     </div>
     //   </div>
     // </div>
-    <div style={{ width: "80%", margin: "15% auto", padding: "0% 10px" }} id='skills'>
+    <div sx={{ width: "80%", margin: "15% auto", padding: "0% 10px" }} id='skills'>
   <div style={{ textAlign: "center" }}>
     <h2 style={{ marginBottom: "12px" }}>
       Relevant Tech Stacks
@@ -181,6 +181,7 @@ const TechStacks = () => {
             src={imageSrc}
             alt={name}
             style={{ height: "10rem", width: "10rem" }}
+            className="skills-card-img"
           />
           <p
             style={{
