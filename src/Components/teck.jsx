@@ -10,7 +10,7 @@ import React from 'react';
 // } from '@chakra-ui/react';
 // import boot from '../Images/boot.svg';
 // import chakra from '../Images/chakra.jpg';
-import html from '../Images/html.svg';
+// import html from '../Images/html.svg';
 // import css from '../Images/css.svg';
 // import js from '../Images/javascript.svg';
 // import react from '../Images/react.svg';
@@ -135,31 +135,80 @@ const TechStacks = () => {
   ];
 
   return (
-    <div  sx={{ width: "80%", margin: "15% auto", padding: "0% 10px" }} id="skills">
-      <div sx={{ borderTop: "2px solid rgb(35,53,84)", position: "relative" }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '12px' }}>
-          Relevant Tech Stacks
-        </h2>
+    // <div  sx={{ width: "80%", margin: "15% auto", padding: "0% 10px" }} id="skills">
+    //   <div sx={{ borderTop: "2px solid rgb(35,53,84)", position: "relative" }}>
+    //     <h2 style={{ textAlign: 'center', marginBottom: '12px' }}>
+    //       Relevant Tech Stacks
+    //     </h2>
+    //     <div
+    //       style={{
+    //         display: 'grid',
+    //         gridTemplateColumns: 'repeat(2, 1fr)',
+    //         gap: '6px',
+    //       }}
+    //     >
+    //       {techStacks.map(({ name, imageSrc }) => (
+    //         <div key={name} style={{ justifyContent: 'center', alignContent: 'center' }} className="skills-card">
+    //           <div>
+    //             <img className="skills-card-img" src={imageSrc} alt={name} style={{ height: '10rem', width: '10rem' }} />
+    //           </div>
+    //           <div style={{ padding: '4px' }}>
+    //             <p style={{ fontWeight: 'bold', display: 'flex', justifyContent: 'center', alignContent: 'center' }} className="skills-card-name">{name}</p>
+    //           </div>
+    //         </div>
+    //       ))}
+    //     </div>
+    //   </div>
+    // </div>
+    <div style={{ width: "80%", margin: "15% auto", padding: "0% 10px" }}>
+  <div style={{ borderTop: "2px solid rgb(35, 53, 84)", textAlign: "center" }}>
+    <h2 style={{ marginBottom: "12px" }}>
+      Relevant Tech Stacks
+    </h2>
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(6, 1fr)",
+        gap: "20px",
+        justifyContent: "center",
+      }}
+    >
+      {techStacks.map(({ name, imageSrc }) => (
         <div
+          key={name}
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            gap: '6px',
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            padding: "20px",
+            border: "1px solid #ddd",
+            borderRadius: "8px",
+            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
           }}
+          className="skills-card"
         >
-          {techStacks.map(({ name, imageSrc }) => (
-            <div key={name} style={{ justifyContent: 'center', alignContent: 'center' }} className="skills-card">
-              <div style={{ borderRadius: 'md', boxShadow: 'md', overflow: 'hidden', height: '15rem', width: '10rem', margin: '1px', padding: '2px', display: 'flex', justifyContent: 'center', alignContent: 'center' }}>
-                <img className="skills-card-img" src={imageSrc} alt={name} style={{ height: '10rem', width: '10rem' }} />
-              </div>
-              <div style={{ padding: '4px' }}>
-                <p style={{ fontWeight: 'bold', display: 'flex', justifyContent: 'center', alignContent: 'center' }} className="skills-card-name">{name}</p>
-              </div>
-            </div>
-          ))}
+          <img
+            src={imageSrc}
+            alt={name}
+            style={{ height: "10rem", width: "10rem" }}
+          />
+          <p
+            style={{
+              fontWeight: "bold",
+              marginTop: "12px",
+              fontSize: "18px",
+              color: "rgb(35, 53, 84)",
+            }}
+            className="skills-card-name"
+          >
+            {name}
+          </p>
         </div>
-      </div>
+      ))}
     </div>
+  </div>
+</div>
+
   );
 };
 

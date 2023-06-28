@@ -160,13 +160,7 @@ const Contact = () => {
             >
               <Icon as={FaLinkedin} boxSize={6}/>
             </Link>
-           
-           
-         
           </HStack>
-
-          
-
           <form onSubmit={handleSubmit}>
             <FormControl>
               <FormLabel>Your Name</FormLabel>
