@@ -10,9 +10,11 @@ import {
   Stack,
   Link,
 } from '@chakra-ui/react';
+
 // import { Link } from "react-scroll";
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
+
 import resume from '../Projectimg/Samarth-B-S-Resume.pdf';
 
 const Navbar = () => {
@@ -22,13 +24,25 @@ const Navbar = () => {
   const textColor = useColorModeValue('light.navtxt', 'dark.navtxt');
   // const primeColor =useColorModeValue('light.primary','dark.primary');
 
+
   const toggleMobileNav = () => {
     setIsMobile(!isMobile);
   };
-
+  // const resume='https://drive.google.com/uc?export=download&id=1HklUsW0C5MbHEDLaL1QipKABBXI3NkvC';
+  // const resume='https://drive.google.com/file/d/1HklUsW0C5MbHEDLaL1QipKABBXI3NkvC/view?usp=sharing'
+  
   const handleDownload = () => {
     window.open(resume, '_blank');
-  };
+    const link = document.createElement('a');
+    link.href = resume;
+    link.target = '_blank';
+    link.download = 'Samarth-B-S-Resume.pdf';
+    link.click();
+  };  
+
+ 
+
+
 
   return (
     <Flex
@@ -90,21 +104,42 @@ const Navbar = () => {
           <Link href="#git" fontWeight="medium" class="gitt">
             Git
           </Link>
-          <Link
+
+          {/* <Link
             id="resume-link-1"
-            onClick={handleDownload}
+        
             href={resume}
             fontWeight="medium"
             target="_blank"
-            class="nav-link resume"
+          
             download={'Samarth-BS-Resume'}
            rel="noreferrer"
-          >
-            <button    id="resume-button-1">
+          > */}
+            {/* <button id="resume-button-1"
+              class="nav-link resume"
+              // onClick={handleDownload}
+              ref={(button) => {
+                if (button) {
+                  button.addEventListener('click', handleDownload);
+                }
+              }}
+                    // target="_blank"
+              // href={resume}
+              // download={'Samarth-BS-Resume'}
+            >
             Resume
             </button>
-          
-          </Link>
+           */}
+          {/* </Link> */}
+
+          <div id="resume-button-1" onClick={handleDownload}>
+              {/* <a id="resume-link-1" class="button button--flex" target="_blank"> */}
+                Resume
+                {/* <i class="uil uil-download-alt button__icon"> */}
+
+                {/* </i> */}
+              {/* </a> */}
+            </div>
        
         </Stack>
       </Box>

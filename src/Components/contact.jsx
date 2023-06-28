@@ -225,15 +225,17 @@ const Contact = () => {
           </form>
         </Box>
       </Flex>
-      <div  >
-            <a href="mailto:samarthbsacharya@gmail.com" id="contact-email" target={"_blank"}>
+      <div  id="contact-email">
+            <a href="mailto:samarthbsacharya@gmail.com"  target={"_blank"}>
             <Icon as={FaEnvelope} boxSize={6}/>
+            <p>samarthbsacharya@gmail.com</p>
             </a> 
 
             </div>
-                <div  >
-                  <a href="8792801332"  id="contact-phone" target={"_blank"}> 
+                <div   id="contact-phone" >
+                  <a href="8792801332" target={"_blank"}> 
                   <Icon as={FaPhone} boxSize={6}/>
+                  <p>8792801332</p>
                   </a>
                 </div>
       </div>

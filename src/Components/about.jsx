@@ -4,10 +4,20 @@ import about from '../Images/aboutme.png'
 // import coding from '../Images/coding.gif';
 // import AOS from "aos";
 
+import resume from '../Projectimg/Samarth-B-S-Resume.pdf';
 import '../Css/main.css';
 
 const About = () => {
   const bgColor = useColorModeValue('light.bg', 'nav.bg');
+
+  const handleDownload = () => {
+    window.open(resume, '_blank');
+    const link = document.createElement('a');
+    link.href = resume;
+    link.target = '_blank';
+    link.download = 'Samarth-B-S-Resume.pdf';
+    link.click();
+  };
   return (
     <>
       <Box
@@ -58,8 +68,25 @@ const About = () => {
             <br />
             including javascript, nodejs, express.js, MongoDb, Typescript and
             AWS.
+            <button  
+                        
+                        id="resume-button-2"     
+                                    //  href={resume}
+                        // target="_blank"
+                        // rel="noreferrer"
+                        // download={'Samarth-BS-Resume'}
+                        onClick={handleDownload}  
+                        // ref={(button) => {
+                        //   if (button) {
+                        //     button.addEventListener('click', handleDownload);
+                        //   }
+                        // }}
+                        >
+                    Resume
+                    </button>
           </Text>
         </Box>
+     
       </Box>
     </>
   );

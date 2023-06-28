@@ -9,19 +9,20 @@ import {
   Image,
   HStack,
   Icon,
-  Button,
-  ButtonGroup
+  // Button,
+  // ButtonGroup
 } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
 
-import { AiOutlineDownload ,AiFillEye} from "react-icons/ai";
+// import { AiOutlineDownload ,AiFillEye} from "react-icons/ai";
+
 import Typewriter from 'typewriter-effect';
 // import profile from '../Images/profile.jpg'
 import profile from '../Images/removal.png';
 
 import '../Css/body.css';
 
-import resume from '../Projectimg/Samarth-B-S-Resume.pdf';
+// import resume from '../Projectimg/Samarth-B-S-Resume.pdf';
 
 const Body = () => {
   const bgColor = useColorModeValue('light.bg', 'dark.bg');
@@ -31,10 +32,18 @@ const Body = () => {
     fontWeight: '600',
     fontSize: '30px',
   };
+  // const resume='https://drive.google.com/uc?export=download&id=1HklUsW0C5MbHEDLaL1QipKABBXI3NkvC';
 
-  const handleDownload = () => {
-    window.open(resume, '_blank');
-  };
+  // const handleDownload = () => {
+  //   window.open(resume, '_blank');
+  //   // const link = document.createElement('a');
+  //   // link.href = resume;
+  //   // link.target = '_blank';
+  //   // link.download = 'Samarth-B-S-Resume.pdf';
+  //   // link.click();
+  // };
+
+  // const resume='https://drive.google.com/uc?export=download&id=1HklUsW0C5MbHEDLaL1QipKABBXI3NkvC';
 
 
 
@@ -159,37 +168,8 @@ const Body = () => {
                 </Link>
               
                 {/* button space */}
-                <ButtonGroup spacing={"5"}>
-                      <Button
-                        //  onClick={handleDownload}
-                        id="resume-button-2"
-                        as={"a"}
-                        variant={"outline"}
-                        borderRadius={"0"}
-                        _hover={{ bg: "white", color: "#1B3C65" }}
-                        size={"xs"}
-                        // href='https://www.dropbox.com/s/c1dhnaj5tp7hnf2/Samarth-B-S-Resume.pdf?dl=0'
-                        // href={resume} 
-                        // href ='../Projectimg/Samarth-B-S-Resume.pdf'
-                        // target="_blank"
-                        // rel="noreferrer"
-                        rightIcon={<AiOutlineDownload/>}
-                        // download='../Projectimg/Samarth-B-S-Resume.pdf'
-                        // download={'Samarth-BS-Resume'}
-
-                      >
-                        <Link     
-                         onClick={handleDownload}
-                        id="resume-link-2"      
-                         href={resume}
-                          target="_blank"
-                          rel="noreferrer"
-                          download={'Samarth-BS-Resume'}
-                        >
-                        Resume
-                        </Link>
-                      
-                      </Button>
+                {/* <ButtonGroup spacing={"5"}> */}
+              
                       {/* <Button
                         // id="resume-button-1"
                         as={"a"}
@@ -205,12 +185,51 @@ const Body = () => {
                       >
                         Resume
                       </Button> */}
-                    </ButtonGroup>
-                    {/* button ButtonGroup */}
+                    {/* </ButtonGroup> */}
+                 
               </HStack>
             </VStack>
           </Box>
         </Flex>
+        {/* <Link 
+                        //  onClick={handleDownload}
+                        id="resume-link-2"      
+                        //  href={resume}
+                        //   target="_blank"
+                        //   // rel="noreferrer"
+                          // download={'Samarth-BS-Resume'}
+                        >
+                      {/* <Button
+                        id="resume-button-2"
+                        as={"a"}
+                        variant={"outline"}
+                        borderRadius={"0"}
+                        _hover={{ bg: "white", color: "#1B3C65" }}
+                        size={"xs"}
+                        rightIcon={<AiOutlineDownload/>}
+                      
+
+                      > */}
+                      {/* <button  
+                        
+                          id="resume-button-2"     
+                                      //  href={resume}
+                          // target="_blank"
+                          // rel="noreferrer"
+                          // download={'Samarth-BS-Resume'}
+                          // onClick={handleDownload}  
+                          ref={(button) => {
+                            if (button) {
+                              button.addEventListener('click', handleDownload);
+                            }
+                          }}
+                          >
+                      Resume
+                      </button> */}
+
+                      
+                      {/* </Button> */}
+                      {/* </Link> */}
       </Box>
     </>
   );
