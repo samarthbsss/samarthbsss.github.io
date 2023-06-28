@@ -150,8 +150,8 @@ const TechStacks = () => {
     //     </div>
     //   </div>
     // </div>
-    <div sx={{ width: "80%", margin: "15% auto", padding: "0% 10px" }} id='skills'>
-  <div style={{ textAlign: "center" }}>
+    <div id='skills'>
+  <div style={{ textAlign: "center", width: "80%", margin: "15% auto", padding: "0% 10px" }}>
     <h2 style={{ marginBottom: "12px" }}>
       Relevant Tech Stacks
     </h2>
