@@ -5,7 +5,7 @@
         "image":"Myntra.png",
         "projectTitle":"Myntra-Clone",
         "projectInfo":"This is a clone of Myntra Fashion app created using HTML , CSS , vanila js , bootstrap",
-        "tech":["vanilaJs", "HTML", "CSS"],
+        "tech":"vanilaJS, HTML, CSS",
         "gitlink":"https://github.com/Vishalll069/Myntra-Clone",
         "link":"https://myntra-clone-v.netlify.app/"
     },
@@ -15,7 +15,7 @@
         "image":"spotify.png",
         "projectTitle":"Spotify-Clone",
         "projectInfo":"This is a Spotify UI Clone built using React + Chakra Ui + Spotify Web Api",
-        "tech":["React", "Chakra Ui", "Spotify-web-api"],
+        "tech":"React, Chakra Ui, Spotify-web-api",
         "gitlink":"https://github.com/thisiskmv/Spotify-Clone",
         "link":"https://spotify-two-virid.vercel.app/"
     },
@@ -25,7 +25,7 @@
         "image":"ajio.png",
         "projectTitle":"Ajio-Clone",
         "projectInfo":"This is a clone for ajio-website created using HTML , CSS , vanila js , bootstrap ",
-        "tech":["vanilaJs", "HTML", "CSS"],
+        "tech":"vanilaJs, HTML, CSS",
         "gitlink":"https://github.com/samarthbsss/Ajio-Clone",
         "link":"https://ajio-clone-ashen.vercel.app/"
     },
@@ -35,7 +35,7 @@
         "image":"profile.png",
         "projectTitle":"Personal-Profile",
         "projectInfo":"personal profile done to show case my skills",
-        "tech":["React", "Chakra Ui"],
+        "tech":"React, Chakra Ui",
         "gitlink":"https://github.com/samarthbsss/samarthbsss.github.io",
         "link":"https://samarthbsss.github.io/"
     }

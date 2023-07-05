@@ -1,13 +1,13 @@
 import React from 'react';
-// import {
-//   Box,
-//   Grid,
-//   GridItem,
-//   Heading,
-//   Text,
-//   Image,
-//   useColorModeValue,
-// } from '@chakra-ui/react';
+import {
+  // Box,
+  // Grid,
+  // GridItem,
+  Heading,
+  // Text,
+  // Image,
+  useColorModeValue,
+} from '@chakra-ui/react';
 // import boot from '../Images/boot.svg';
 // import chakra from '../Images/chakra.jpg';
 // import html from '../Images/html.svg';
@@ -40,9 +40,9 @@ const TechStacks = () => {
   //   { name: 'Redux', imageSrc: redux },
   //   { name: 'Bootstrap', imageSrc: boot },
   // ];
-  // const bgColor = useColorModeValue('light.bg', 'nav.bg');
-  // // const textColor = useColorModeValue('light.text', 'dark.text');
-  // // const primeColor =useColorModeValue('light.primary','dark.primary');
+  const bgColor = useColorModeValue('light.bg', 'nav.bg');
+  // const textColor = useColorModeValue('light.text', 'dark.text');
+  // const primeColor =useColorModeValue('light.primary','dark.primary');
 
   // return (
   //   <Box pt={8} pb={16} id="skills">
@@ -152,6 +152,9 @@ const TechStacks = () => {
     // </div>
     <div id='skills'>
   <div style={{ textAlign: "center", width: "80%", margin: "15% auto", padding: "0% 10px" }}>
+           <Heading as="h2" size="2xl" textAlign="center" mb={12} color={bgColor}>
+           Relevant Tech Stacks
+         </Heading>
     <h2 style={{ marginBottom: "12px" }}>
       Relevant Tech Stacks
     </h2>

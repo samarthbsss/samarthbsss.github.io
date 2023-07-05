@@ -129,11 +129,9 @@ function Projects() {
       }}
       id="projects"
     >
-      <h2 style={{textAlign: 'center',fontSize:"40px", marginBottom: '2rem', padding: '2rem' ,color:bgColor}}>
-
-     
+      {/* <h2 style={{textAlign: 'center',fontSize:"40px", marginBottom: '2rem', padding: '2rem' ,color:bgColor}}>
         Projects
-      </h2>
+      </h2> */}
       <Heading as="h2" size="2xl" textAlign="center" mb={12} p="2rem">
         Projects
       </Heading>
@@ -166,7 +164,7 @@ function Projects() {
                 alt=""
                 style={{ width: '100%' }}
               />
-              <div style={{ padding: '16px' }}>
+              <div style={{ padding: '20px' }}>
                 <h4
                   style={{
                     fontWeight: 'bold',
@@ -177,10 +175,10 @@ function Projects() {
                 >
                   {card.projectTitle}
                 </h4>
-                <p style={{ marginBottom: '4px', color: 'blue' }} className="project-description">
+                <p style={{ marginBottom: '4px' }} className="project-description">
                   {card.projectInfo}
                 </p>
-                <p className="project-tech-stack"> {card.projectInfo}</p>
+                <p style={{ marginBottom: '10px' }} className="project-tech-stack" > {card.tech}</p>
                 <div style={{ display: 'flex', justifyContent: 'space-around' }}>
                   <a
                     href={card.gitlink}
