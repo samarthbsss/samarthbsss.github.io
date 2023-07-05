@@ -68,6 +68,7 @@ const About = () => {
             <br />
             including javascript, nodejs, express.js, MongoDb, Typescript and
             AWS.
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding:'20px', margin:"10px", }}>
             <button  
                         
                         id="resume-button-2"     
@@ -84,6 +85,8 @@ const About = () => {
                         >
                     Resume
                     </button>
+            </div>
+           
           </Text>
         </Box>
      

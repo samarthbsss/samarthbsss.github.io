@@ -105,11 +105,20 @@
 //   );
 // }
 
+import {
+  useColorModeValue,
+  Heading,
+} from '@chakra-ui/react';
 import React from 'react';
 import { FiGithub, FiEye } from 'react-icons/fi';
 import data from '../Json/project.json';
 
 function Projects() {
+  const bgColor = useColorModeValue('light.bg', 'dark.bg');
+  //   const textColor = useColorModeValue('light.text', 'dark.text');
+  //   const primeColor = useColorModeValue('light.primary', 'dark.primary');
+
+
   return (
     <div
       style={{
@@ -120,9 +129,14 @@ function Projects() {
       }}
       id="projects"
     >
-      <h2 style={{ textAlign: 'center', marginBottom: '2rem', padding: '2rem' }}>
+      <h2 style={{textAlign: 'center',fontSize:"40px", marginBottom: '2rem', padding: '2rem' ,color:bgColor}}>
+
+     
         Projects
       </h2>
+      <Heading as="h2" size="2xl" textAlign="center" mb={12} p="2rem">
+        Projects
+      </Heading>
 
       <div
         style={{
