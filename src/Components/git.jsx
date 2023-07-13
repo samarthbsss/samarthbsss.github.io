@@ -29,7 +29,7 @@ const Git = () => {
             id="github-streak-stats"
               // className="gitlang"
               // src="https://github-readme-streak-stats.herokuapp.com/?user=samarthbsss&theme=dark&hide_border=true"
-              src='https://github-readme-streak-stats.herokuapp.com?user=samarthbsss'
+              src='https://github-readme-streak-stats.herokuapp.com?user=samarthbsss&theme=dark&hide_border=true'
               alt='githubtop'
             />
           </Box>
@@ -49,27 +49,12 @@ const Git = () => {
             username="samarthbsss"
             style={{
               background: 'transparent',
-              text: '#333',
-              // grade4: 'green',
-              // grade3: 'green',
-              // grade2: 'yellowgreen',
-              // grade1: 'orange',
-              // grade0: 'red',
-
-              // background: 'transparent',
-              // text: textColor,
-              // grade0: '#e4e7ec',
-              // grade1: '#cfd3da',
-              // grade2: '#b7bec9',
-              // grade3: '#8d96a3',
-              // grade4: '#6e7681',
-         
+              text: '#333'
             }}
           />
           <br></br>
         </div>
         <div
-          // className="gitlang"
           style={{
             display: 'flex',
             alignContent: 'center',

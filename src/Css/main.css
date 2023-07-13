@@ -8,7 +8,7 @@
     font-weight: 500;
 }
 
-#resume-button-2 {
+/* #resume-button-2 {
     display: inline-block;
     padding: 12px 24px;
     font-size: 20px;
@@ -29,4 +29,4 @@
   #resume-button-2:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.4);
-  }
+  } */

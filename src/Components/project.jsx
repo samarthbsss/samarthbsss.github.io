@@ -115,8 +115,8 @@ import data from '../Json/project.json';
 
 function Projects() {
   const bgColor = useColorModeValue('light.bg', 'dark.bg');
-  //   const textColor = useColorModeValue('light.text', 'dark.text');
-  //   const primeColor = useColorModeValue('light.primary', 'dark.primary');
+    const textColor = useColorModeValue('light.text', 'dark.text');
+    const primeColor = useColorModeValue('light.primary', 'dark.primary');
 
 
   return (
@@ -132,7 +132,7 @@ function Projects() {
       {/* <h2 style={{textAlign: 'center',fontSize:"40px", marginBottom: '2rem', padding: '2rem' ,color:bgColor}}>
         Projects
       </h2> */}
-      <Heading as="h2" size="2xl" textAlign="center" mb={12} p="2rem">
+      <Heading as="h2" size="2xl" textAlign="center" color={primeColor}  mb={12} p="2rem">
         Projects
       </Heading>
 
@@ -148,10 +148,6 @@ function Projects() {
         {data.map((card, id) => (
           <div key={card.key} className="project-card">
             <img src="" alt="" />
-          
-     
-         
-          
             <div
               style={{
                 borderWidth: '1px',

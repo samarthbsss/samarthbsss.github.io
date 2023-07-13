@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import '../Css/main.css'
-
+import '../Css/main.css';
 import {
+  useBreakpointValue,
   useColorModeValue,
   Flex,
   Box,
@@ -10,8 +10,6 @@ import {
   Stack,
   Link,
 } from '@chakra-ui/react';
-
-// import { Link } from "react-scroll";
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
 
@@ -23,14 +21,12 @@ const Navbar = () => {
   const bgColor = useColorModeValue('light.navbg', 'dark.navbg');
   const textColor = useColorModeValue('light.navtxt', 'dark.navtxt');
   // const primeColor =useColorModeValue('light.primary','dark.primary');
-
+  const isButtonVisible = useBreakpointValue({ base: false, md: true });
 
   const toggleMobileNav = () => {
     setIsMobile(!isMobile);
   };
-  // const resume='https://drive.google.com/uc?export=download&id=1HklUsW0C5MbHEDLaL1QipKABBXI3NkvC';
-  // const resume='https://drive.google.com/file/d/1HklUsW0C5MbHEDLaL1QipKABBXI3NkvC/view?usp=sharing'
-  
+
   const handleDownload = () => {
     window.open(resume, '_blank');
     const link = document.createElement('a');
@@ -38,11 +34,7 @@ const Navbar = () => {
     link.target = '_blank';
     link.download = 'Samarth-B-S-Resume.pdf';
     link.click();
-  };  
-
- 
-
-
+  };
 
   return (
     <Flex
@@ -60,27 +52,28 @@ const Navbar = () => {
       id="nav-menu"
     >
       <Box>
-        <Link href="/" fontSize="2xl" fontWeight="bold" 
-        class="nav-link home"
-        >
+        <Link href="/" fontSize="2xl" fontWeight="bold" class="nav-link home">
           Samarth
         </Link>
       </Box>
       <Spacer />
-      <Box display={{ base: 'block', md: 'none' }}>
+      <Box display={{ base: 'flex', md: 'none' }}>
         <IconButton
           icon={<HamburgerIcon />}
           onClick={toggleMobileNav}
           aria-label="Toggle Navigation"
           variant="outline"
-        />
+        />{
+          !isButtonVisible &&(
+            <ColorModeSwitcher justifySelf="flex-end"/>
+
+          )
+        }
       </Box>
       <Box
         display={{ base: isMobile ? 'block' : 'none', md: 'flex' }}
         width={{ base: 'full', md: 'auto' }}
-       
         flexGrow={1}
-    
       >
         <Stack
           //  border='1px solid red'
@@ -92,58 +85,33 @@ const Navbar = () => {
           <Link href="#about" fontWeight="medium" class="nav-link about">
             About
           </Link>
-          <Link href="#projects" fontWeight="medium" class="nav-link projects"> 
+          <Link href="#projects" fontWeight="medium" class="nav-link projects">
             Projects
           </Link>
           <Link href="#contact" fontWeight="medium" class="nav-link contact">
             Contact
           </Link>
-          <Link href="#skills" fontWeight="medium"  class="nav-link skills" >
+          <Link href="#skills" fontWeight="medium" class="nav-link skills">
             Skills
           </Link>
           <Link href="#git" fontWeight="medium" class="gitt">
             Git
           </Link>
-
-          {/* <Link
-            id="resume-link-1"
-        
-            href={resume}
-            fontWeight="medium"
-            target="_blank"
-          
-            download={'Samarth-BS-Resume'}
-           rel="noreferrer"
-          > */}
-            {/* <button id="resume-button-1"
-              class="nav-link resume"
-              // onClick={handleDownload}
-              ref={(button) => {
-                if (button) {
-                  button.addEventListener('click', handleDownload);
-                }
-              }}
-                    // target="_blank"
-              // href={resume}
-              // download={'Samarth-BS-Resume'}
-            >
+          <div
+            id="resume-button-1"
+            onClick={handleDownload}
+            class="nav-link resume"
+          >
             Resume
-            </button>
-           */}
-          {/* </Link> */}
-
-          <div id="resume-button-1" onClick={handleDownload}  class="nav-link resume">
-              {/* <a id="resume-link-1" class="button button--flex" target="_blank"> */}
-                Resume
-                {/* <i class="uil uil-download-alt button__icon"> */}
-
-                {/* </i> */}
-              {/* </a> */}
-            </div>
-       
+          </div>
         </Stack>
       </Box>
-      <ColorModeSwitcher justifySelf="flex-end" />
+      {
+        isButtonVisible && (
+          <ColorModeSwitcher justifySelf="flex-end"/>
+
+        )
+      }
     </Flex>
   );
 };

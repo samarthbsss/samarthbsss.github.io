@@ -9,20 +9,13 @@ import {
   Image,
   HStack,
   Icon,
-  // Button,
-  // ButtonGroup
 } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
-
-// import { AiOutlineDownload ,AiFillEye} from "react-icons/ai";
-
 import Typewriter from 'typewriter-effect';
-// import profile from '../Images/profile.jpg'
+
 import profile from '../Images/removal.png';
 
-import '../Css/body.css';
-
-// import resume from '../Projectimg/Samarth-B-S-Resume.pdf';
+// import '../Css/body.css';
 
 const Body = () => {
   const bgColor = useColorModeValue('light.bg', 'dark.bg');
@@ -32,81 +25,51 @@ const Body = () => {
     fontWeight: '600',
     fontSize: '30px',
   };
-  // const resume='https://drive.google.com/uc?export=download&id=1HklUsW0C5MbHEDLaL1QipKABBXI3NkvC';
-
-  // const handleDownload = () => {
-  //   window.open(resume, '_blank');
-  //   // const link = document.createElement('a');
-  //   // link.href = resume;
-  //   // link.target = '_blank';
-  //   // link.download = 'Samarth-B-S-Resume.pdf';
-  //   // link.click();
-  // };
-
-  // const resume='https://drive.google.com/uc?export=download&id=1HklUsW0C5MbHEDLaL1QipKABBXI3NkvC';
-
-
 
   return (
     <>
-      <Box bg={bgColor} color={textColor} w={"100%"} id='home'>
+      <Box bg={bgColor} color={textColor} w={'100%'} id="home">
         <Flex
-          mb="2rem"
+          direction={{ base: 'column', md: 'row' }}
           p={{ base: '1rem', md: '5rem' }}
-          // p='5rem'
-          alignContent="center"
-          justifyContent="space-around"
-          display={{ base: 'block', md: 'flex' }}
-          mt={{ base: '5rem', md: '5rem' }}
+    align="center"
+          mt={{ base: '5rem', md: '5rem' }} >
 
-        >
           <Box
-            display={"flex"}
-            alignContent={"center"}
-            justifyContent={"center"}
-            position={"relative"}
-            // p={{ base: '1rem', md: '5rem' }}
+            display={'flex'}
+            justifyContent={'center'}
+            position='relative'
             p={1}
-            width={"20%"}
-            height={"20%"}
-            borderRadius={"full"}
+            width={{ base: '60%', md: '20%' }}
+          height={{ base: '60%', md: '20%' }}
+            borderRadius={'full'}
             className="box"
-         
+mb={{ base: '2rem', md: '0' }}
           >
-            <img class="home-img" alt='' src=''/>
+            <img class="home-img" alt="" src="" />
             <Image
               boxShadow="2xl"
               width="100%"
               height="100%"
               borderRadius="full"
-           
               src={profile}
               alt="MyProfile"
               objectFit="cover"
-              // position="absolute"
-             
-
               zIndex={0}
               transition="transform 0.3s ease"
             />
           </Box>
           <Box
             p={1}
-            // ml={3}
-            ml={{ base: '5rem', md: '1rem' }}
-            m={3}
-            w={'60%'}
-            h={'60%'}
-            display={"flex"}
-            alignContent={"center"}
-            justifyContent={"center"}
-            // border='1px solid red'
-          
+               ml={{ base: '0', md: '1rem' }}
+          w={{ base: '100%', md: '60%' }}
+      
+        
+            display={'flex'}
+        
+            justifyContent={'center'}
           >
-            <VStack
-              align="start"
-              // p={1}
-            >
+            <VStack align="start" spacing={4}>
               <Text fontSize="md" fontWeight="bold">
                 HEY
                 <span className="wave">👋</span>, I AM
@@ -114,7 +77,7 @@ const Body = () => {
               <Text fontSize="4xl" fontWeight="medium" id="user-detail-name">
                 Samarth B S
               </Text>
-              <div style={typestyle}  >
+              <div style={typestyle}>
                 <Typewriter
                   options={{
                     loop: true,
@@ -134,19 +97,14 @@ const Body = () => {
                   }}
                 />
               </div>
-          
-              <Text fontSize="md" color={primeColor} 
-              // id="user-detail-intro"
-               >
-                A Full-Stack Web Developer based in India,
-               
-                working on frontend and  <br />backend technologies including
-                JavaScript, typescript, 
-                React, Redux, MongoDB, Express and NodeJS.
+              <Text fontSize="md" color={primeColor}>
+                A Full-Stack Web Developer based in India, working on frontend
+                and <br />
+                backend technologies including JavaScript, typescript, React,
+                Redux, MongoDB, Express and NodeJS.
                 <br />I like to craft solid and scalable products with great
                 user experiences.
               </Text>
-
               <HStack spacing={4} gap={2} p={3}>
                 <Link href="https://github.com/samarthbsss" target="_blank">
                   <Icon as={FaGithub} boxSize={6} />
@@ -166,70 +124,10 @@ const Body = () => {
                 <Link href="tel:+8792801332" target="_blank">
                   <Icon as={FaPhone} boxSize={6} />
                 </Link>
-              
-                {/* button space */}
-                {/* <ButtonGroup spacing={"5"}> */}
-              
-                      {/* <Button
-                        // id="resume-button-1"
-                        as={"a"}
-                        variant={"outline"}
-                        borderRadius={"0"}
-                        _hover={{ bg: "white", color: "#1B3C65" }}
-                        size={"xs"}
-                        href='https://www.dropbox.com/s/c1dhnaj5tp7hnf2/Samarth-B-S-Resume.pdf?dl=0'
-                        rel="noreferrer"
-                        target="_blank"
-                        rightIcon={<AiFillEye/>}
-
-                      >
-                        Resume
-                      </Button> */}
-                    {/* </ButtonGroup> */}
-                 
               </HStack>
             </VStack>
           </Box>
         </Flex>
-        {/* <Link 
-                        //  onClick={handleDownload}
-                        id="resume-link-2"      
-                        //  href={resume}
-                        //   target="_blank"
-                        //   // rel="noreferrer"
-                          // download={'Samarth-BS-Resume'}
-                        >
-                      {/* <Button
-                        id="resume-button-2"
-                        as={"a"}
-                        variant={"outline"}
-                        borderRadius={"0"}
-                        _hover={{ bg: "white", color: "#1B3C65" }}
-                        size={"xs"}
-                        rightIcon={<AiOutlineDownload/>}
-                      
-
-                      > */}
-                      {/* <button  
-                        
-                          id="resume-button-2"     
-                                      //  href={resume}
-                          // target="_blank"
-                          // rel="noreferrer"
-                          // download={'Samarth-BS-Resume'}
-                          // onClick={handleDownload}  
-                          ref={(button) => {
-                            if (button) {
-                              button.addEventListener('click', handleDownload);
-                            }
-                          }}
-                          >
-                      Resume
-                      </button> */}
-
-                      
-                      {/* </Button> */}
-                      {/* </Link> */}
       </Box>
     </>
   );

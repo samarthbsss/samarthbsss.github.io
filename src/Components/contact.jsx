@@ -160,6 +160,15 @@ const Contact = () => {
             >
               <Icon as={FaLinkedin} boxSize={6}/>
             </Link>
+            <Link
+                  href="mailto:samarthbsacharya@example.com"
+                  target="_blank"
+                >
+                  <Icon as={FaEnvelope} boxSize={6} />
+                </Link>
+                <Link href="tel:+8792801332" target="_blank">
+                  <Icon as={FaPhone} boxSize={6} />
+                </Link>
           </HStack>
           <form onSubmit={handleSubmit}>
             <FormControl>
@@ -219,7 +228,7 @@ const Contact = () => {
           </form>
         </Box>
       </Flex>
-      <div  id="contact-email">
+      {/* <div  id="contact-email">
             <a href="mailto:samarthbsacharya@gmail.com"  target={"_blank"}>
             <Icon as={FaEnvelope} boxSize={6}/>
             <p>samarthbsacharya@gmail.com</p>
@@ -231,7 +240,7 @@ const Contact = () => {
                   <Icon as={FaPhone} boxSize={6}/>
                   <p>8792801332</p>
                   </a>
-                </div>
+                </div> */}
       </div>
     </>
   );

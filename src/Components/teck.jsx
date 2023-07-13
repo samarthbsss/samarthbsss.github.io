@@ -155,9 +155,9 @@ const TechStacks = () => {
            <Heading as="h2" size="2xl" textAlign="center" mb={12} color={bgColor}>
            Relevant Tech Stacks
          </Heading>
-    <h2 style={{ marginBottom: "12px" }}>
+    {/* <h2 style={{ marginBottom: "12px" }}>
       Relevant Tech Stacks
-    </h2>
+    </h2> */}
     <div
       style={{
         display: "grid",
