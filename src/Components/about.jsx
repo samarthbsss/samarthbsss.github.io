@@ -14,6 +14,7 @@ import { AiFillEye } from 'react-icons/ai';
 
 const About = () => {
   const bgColor = useColorModeValue('light.bg', 'nav.bg');
+  const backDrop =useColorModeValue('white','dark.bg');
   const textColor = useColorModeValue('light.text', 'dark.text');
   const primeColor = useColorModeValue('light.primary', 'dark.primary');
 
@@ -33,13 +34,14 @@ const About = () => {
       alignItems={{ base: 'center', md: 'flex-start' }}
       justifyContent={{ base: 'center', md: 'space-around' }}
       padding="2rem"
-      mt={2}
-      paddingTop={2}
+      
+      paddingTop={4}
       mr={3}
       width="100%"
       height="100%"
       id="about"
       className="about section sections"
+      background={backDrop}
     >
       <Box
         flex="1"
@@ -64,13 +66,14 @@ const About = () => {
           height="100%"
           m={2}
           p={3}
+          id="user-detail-intro"
         >
           Full-stack web developer specializing in the MERN stack.
           <br />
-          <p id="user-detail-intro">
+          {/* <p id="user-detail-intro"> */}
             proficient in HTML5, CSS3, JavaScript, ReactJs, NodeJs, and Express,
             with a strong grasp of database technologies such as MongoDB.
-          </p>
+          {/* </p> */}
           Hands-on experience building React apps in both front-end and back-end
           roles. Portfolio includes six major projects and 15+ mini projects,
           <br /> showcasing teamwork, leadership, and communication skills.

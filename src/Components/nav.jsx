@@ -52,7 +52,7 @@ const Navbar = () => {
       id="nav-menu"
     >
       <Box>
-        <Link href="/" fontSize="2xl" fontWeight="bold" class="nav-link home">
+        <Link href="/" fontSize="2xl" fontWeight="bold" className="nav-link home">
           Samarth
         </Link>
       </Box>
@@ -82,25 +82,25 @@ const Navbar = () => {
           align={{ base: 'center', md: 'center' }}
           pt={{ base: 4, md: 0 }}
         >
-          <Link href="#about" fontWeight="medium" class="nav-link about">
+          <Link href="#about" fontWeight="medium" className="nav-link about">
             About
           </Link>
-          <Link href="#projects" fontWeight="medium" class="nav-link projects">
+          <Link href="#projects" fontWeight="medium" className="nav-link projects">
             Projects
           </Link>
-          <Link href="#contact" fontWeight="medium" class="nav-link contact">
+          <Link href="#contact" fontWeight="medium" className="nav-link contact">
             Contact
           </Link>
-          <Link href="#skills" fontWeight="medium" class="nav-link skills">
+          <Link href="#skills" fontWeight="medium" className="nav-link skills">
             Skills
           </Link>
-          <Link href="#git" fontWeight="medium" class="gitt">
+          <Link href="#git" fontWeight="medium" className="gitt">
             Git
           </Link>
           <div
             id="resume-button-1"
             onClick={handleDownload}
-            class="nav-link resume"
+            className="nav-link resume"
           >
             Resume
           </div>

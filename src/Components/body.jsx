@@ -46,7 +46,7 @@ const Body = () => {
             className="box"
 mb={{ base: '2rem', md: '0' }}
           >
-            <img class="home-img" alt="" src="" />
+            {/* <img class="home-img" alt="" src="" /> */}
             <Image
               boxShadow="2xl"
               width="100%"
