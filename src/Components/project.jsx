@@ -128,19 +128,23 @@ import data from '../Json/project.json';
 
 const Projects = () => {
   const backDrop =useColorModeValue('white','dark.navbg');
+  const base=useColorModeValue('light.bg','dark.bg');
   const bgColor = useColorModeValue('light.bg', 'nav.bg');
   const textColor = useColorModeValue('light.text', 'dark.text');
   const primeColor = useColorModeValue('light.primary', 'dark.primary');
-  const buttonColor = useColorModeValue('light.bg','dark.navbg' )
+  const buttonColor = useColorModeValue('light.bg','white' )
+
 
   return (
     <Box
       width="100%"
       height="90%"
-      paddingBottom="3rem"
-      marginBottom="2rem"
+      p={2}
+      paddingBottom="5rem"
+      boxShadow='xl'
       id="projects"
-      background={bgColor}
+      background={base}
+     
     >
       <Heading
         as="h2"
@@ -155,7 +159,7 @@ const Projects = () => {
 
       <Grid
         templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }}
-        gap="10px"
+        gap="20px"
         marginRight="6px"
         marginLeft="6px"
       >
@@ -167,6 +171,8 @@ const Projects = () => {
             borderRadius="lg"
             overflow="hidden"
             background={backDrop}
+            boxShadow={"rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"}
+          
           >
             <Image
               src={require(`../Projectimg/${card.image}`)}

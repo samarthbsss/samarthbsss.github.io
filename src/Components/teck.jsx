@@ -1,18 +1,15 @@
 import React from 'react';
 import {
-  // Box,
-  // Grid,
-  // GridItem,
-  Heading,
-  // Text,
-  // Image,
+  Heading, 
+  Box,
+  
   useColorModeValue,
 } from '@chakra-ui/react';
 
 const TechStacks = () => {
-  const bgColor = useColorModeValue('light.bg', 'nav.bg');
-  const textColor = useColorModeValue('light.text', 'dark.text');
-  const primeColor =useColorModeValue('light.primary','dark.primary');
+  const bgColor = useColorModeValue('light.bg', 'white');
+  const primeColor =useColorModeValue('white','#1F1F1F');
+  const backDrop =useColorModeValue('#F9F9F9','#1F1F1F');
 
   const techStacks = [
     { name: 'HTML', imageSrc: 'https://img.icons8.com/color/512/html-5--v1.png' },
@@ -32,14 +29,16 @@ const TechStacks = () => {
   ];
 
   return (
-  <div id='skills'>
+  <Box id='skills' style={{background:backDrop}}  >
 
   <div
+ 
   style={{
     textAlign: "center",
     width: "80%",
-    margin: "15% auto", 
-    padding: "0% 10px",
+    margin: "auto", 
+    padding: "5% 10px",
+   
   }}
 >
   <Heading as="h2" size="2xl" textAlign="center" mb={12} color={bgColor}>
@@ -61,10 +60,11 @@ const TechStacks = () => {
           flexDirection: "column",
           alignItems: "center",
           padding: "20px",
-          border: "1px solid #ddd",
+          border: "1px solid grey",
           borderRadius: "8px",
           boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
           marginBottom: "20px",
+          background:primeColor
         }}
         className="skills-card"
       >
@@ -90,7 +90,7 @@ const TechStacks = () => {
   </div>
 </div>
 
-</div>
+</Box>
 
   );
 };

@@ -10,6 +10,7 @@ import Footer from './footer';
 import Git from './git';
 import Projects from './project';
 
+
 import TechStacks from './teck';
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
         <Projects />
         <TechStacks />
         <Git />
+        
         <Contact />
         <Footer />
       </Box>

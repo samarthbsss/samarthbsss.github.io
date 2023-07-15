@@ -10,13 +10,13 @@ function Footer() {
   return <>  
     <Divider/>
     
-    <Box py={4} bg={bgColor} pt='2rem' pb='2rem' w='100%'>
+    <Box py={4} bg={bgColor} pt='2rem' pb='2rem' w='100%' boxShadow='2xl'>
        
       <Text textAlign="center" color="white" fontSize="sm">
  
         © 2023 Built by Samarth BS
-              <span>    <AiFillHeart className="heart-beat"/></span>. 
-              All rights reserved.  
+              <span>    <AiFillHeart className="heart-beat"/></span>
+             
      
        
       </Text>

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import {
   Icon,
-  //  Link,
   Spinner,
   Box,
   Text,
@@ -21,14 +20,14 @@ import {
 } from '@chakra-ui/react';
 // import mes from '../Images/send.gif';
 import send from '../Images/send.svg';
-// import {  animateScroll as scroll } from 'react-scroll';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const Contact = () => {
   const bgColor = useColorModeValue('light.bg', 'nav.bg');
   // const textColor = useColorModeValue('light.text', 'dark.text');
-  // const primeColor =useColorModeValue('light.primary','dark.primary');
+  const primeColor =useColorModeValue('white','dark.bg');
   const buttonColor = useColorModeValue('light.bg', 'white');
+  const backDrop =useColorModeValue('#F9F9F9','dark.bg');
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -95,21 +94,135 @@ const Contact = () => {
 
   return (
     <>
-      <Heading as="h2" size="2xl" textAlign="center" mb={12} color={bgColor}>
+     
+      {/* <Heading as="h2" size="2xl" textAlign="center" mb={12} color={bgColor}>
         {' '}
         Send me a Message!
       </Heading>
-      {/* <Text align='center' fontSize='4xl'
-    ref={aboutRef}
-    bg={bgColor} color={textColor} p={2} mt='1rem'>Send me a Message!</Text> */}
-
+  <Text align="center" fontSize="2xl">
+        Got a question or proposal, or just want to say hello? Go ahead.
+      </Text> */}
+    <div  id="contact">
+    <Box p={2} margin="auto"
+     background={backDrop}
+     paddingTop={['2rem', '2rem', '5rem']} 
+     paddingBottom={['2rem', '2rem', '5rem']} 
+    align={'center'} >
+      <Heading as="h2" size="2xl" textAlign="center" mb={5} color={buttonColor} >
+        Send me a Message!
+      </Heading>
       <Text align="center" fontSize="2xl">
         Got a question or proposal, or just want to say hello? Go ahead.
       </Text>
-    <div  id="contact">
+
+      <Flex
+       
+        direction={['column', 'column', 'row']}
+        align={['center', 'center', 'stretch']}
+        justify={['center', 'center', 'space-around']}
+        padding="2rem"
+        //  background='white'
+        maxWidth="600px"
+      >
+        {/* <Box maxWidth={['100%', '100%', '45rem']} height="auto" marginBottom={['2rem', '2rem', '0']}> */}
+          {/* <Image src={send} alt="Preview" maxWidth="100%" /> */}
+        {/* </Box> */}
+
+        <Box
+        //  paddingTop={['2rem', '2rem', '5rem']} 
+         width="100%">
+          <HStack
+            spacing={4}
+            gap={2}
+            justifyContent="center"
+            alignContent="center"
+            mb={8}
+            mx={['auto', 'auto', '0']}
+            color={buttonColor}
+          >
+            <Link href="https://github.com/samarthbsss" target="_blank" id="contact-github">
+              <Icon
+                as={FaGithub}
+                boxSize={6}
+                _hover={{
+                  scale: '1.1',
+                  transition: '0.5s',
+                }}
+              />
+            </Link>
+            <Link href="https://www.linkedin.com/in/samarthbsacharya/" target="_blank" id="contact-linkedin">
+              <Icon as={FaLinkedin} boxSize={6} />
+            </Link>
+
+            <Link href="mailto:samarthbsacharya@example.com" target="_blank">
+              <Icon as={FaEnvelope} boxSize={6} />
+            </Link>
+            <Link href="tel:+8792801332" target="_blank">
+              <Icon as={FaPhone} boxSize={6} />
+            </Link>
+          </HStack>
+
+          <form onSubmit={handleSubmit}>
+            <FormControl>
+              <FormLabel>Your Name</FormLabel>
+              <Input
+                type="text"
+                placeholder="Enter Your Name"
+                value={name}
+                onChange={e => setName(e.target.value)}
+                m={2}
+                background={primeColor}
+              />
+
+              <FormLabel>Email address</FormLabel>
+              <Input
+                type="email"
+                placeholder="Enter Your Email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                m={2}
+                background={primeColor}
+              />
+
+              <FormLabel>Your Message</FormLabel>
+              <Textarea
+                placeholder="Drop me a message!"
+                value={message}
+                onChange={e => setMessage(e.target.value)}
+                m={2}
+                background={primeColor}
+              />
+
+              <Box display="flex" justifyContent="center" alignContent="center">
+                <Button
+                  mt="1rem"
+                  width="15rem"
+                  type="submit"
+                  colorScheme="teal"
+                  size="md"
+                  bg={buttonColor}
+                  isLoading={isLoading}
+                  disabled={isSent}
+                  onClick={handleSend}
+                  loadingText="Sending..."
+                  spinner={<Spinner color="textColor" size="sm" />}
+                  _disabled={{
+                    opacity: 0.6,
+                    cursor: 'not-allowed',
+                  }}
+                  _hover={{ bg: '', scale: '1.1', transition: '0.5s' }}
+                >
+                  Send
+                </Button>
+              </Box>
+            </FormControl>
+          </form>
+        </Box>
+      </Flex>
+    </Box>
 
    
-      <Flex
+      {/* <Flex
         onMouseEnter={() => setIsPlaying(true)}
         onMouseLeave={() => setIsPlaying(false)}
         alignContent="center"
@@ -160,13 +273,15 @@ const Contact = () => {
             >
               <Icon as={FaLinkedin} boxSize={6}/>
             </Link>
+            
             <Link
                   href="mailto:samarthbsacharya@example.com"
                   target="_blank"
+                 
                 >
                   <Icon as={FaEnvelope} boxSize={6} />
                 </Link>
-                <Link href="tel:+8792801332" target="_blank">
+                <Link href="tel:+8792801332" target="_blank" >
                   <Icon as={FaPhone} boxSize={6} />
                 </Link>
           </HStack>
@@ -189,7 +304,7 @@ const Contact = () => {
                 onChange={e => setEmail(e.target.value)}
                 m={2}
               />
-              {/* <FormHelperText>We'll never share your email.</FormHelperText> */}
+           
 
               <FormLabel>Your Message</FormLabel>
               <Textarea
@@ -198,7 +313,7 @@ const Contact = () => {
                 onChange={e => setMessage(e.target.value)}
                 m={2}
               />
-              {/* <Button type='submit'>Submit</Button> */}
+              
               <Box display="flex" justifyContent="center" alignContent="center">
                 <Button
                   mt="1rem"
@@ -208,8 +323,7 @@ const Contact = () => {
                   size="md"
                   //  bg={bgColor}
                   bg={buttonColor}
-                  // textColor='black'
-                  //  color={bgColor}
+                 
                   isLoading={isLoading}
                   disabled={isSent}
                   onClick={handleSend}
@@ -227,20 +341,21 @@ const Contact = () => {
             </FormControl>
           </form>
         </Box>
-      </Flex>
-      {/* <div  id="contact-email">
+      </Flex> */}
+
+      <div  id="contact-email">
             <a href="mailto:samarthbsacharya@gmail.com"  target={"_blank"}>
-            <Icon as={FaEnvelope} boxSize={6}/>
-            <p>samarthbsacharya@gmail.com</p>
+            {/* <Icon as={FaEnvelope} boxSize={6}/>
+            <p>samarthbsacharya@gmail.com</p> */}
             </a> 
 
             </div>
                 <div   id="contact-phone" >
                   <a href="8792801332" target={"_blank"}> 
-                  <Icon as={FaPhone} boxSize={6}/>
-                  <p>8792801332</p>
+                  {/* <Icon as={FaPhone} boxSize={6}/>
+                  <p>8792801332</p> */}
                   </a>
-                </div> */}
+                </div>
       </div>
     </>
   );

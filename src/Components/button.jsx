@@ -1,12 +1,11 @@
 
 import { Box, Button, useColorModeValue } from '@chakra-ui/react';
 import { FaArrowUp } from 'react-icons/fa';
+import { IconContext } from "react-icons";
 import { useState, useEffect } from 'react';
 
 const ScrollToTopButton = () => {
   const bgColor = useColorModeValue('light.bg', 'nav.bg');
-  // const textColor = useColorModeValue('light.text', 'dark.text');
-  // const primeColor =useColorModeValue('light.primary','dark.primary');
   const buttonColor = useColorModeValue('light.bg', 'white');
   const colortxt = useColorModeValue('white', 'black');
   const [showButton, setShowButton] = useState(false);
@@ -38,6 +37,8 @@ const ScrollToTopButton = () => {
   }, []);
 
   return (
+    <>
+   
     <Box
       position="fixed"
       bottom="4"
@@ -46,24 +47,42 @@ const ScrollToTopButton = () => {
       transition="opacity 0.3s"
       opacity={showButton ? 1 : 0}
       borderRadius="full"
-      rounded="full"
+      // rounded="full"
       bg={buttonColor}
+   
     >
-      <Button
+      {/* <Button
         onClick={handleScrollToTop}
-        // colorScheme="teal"
         bg={buttonColor}
         border={`1px solid ${oppositeColor}`}
-        // size="md"
-        // leftIcon={<FaArrowUp />}
-        color={colortxt}
-        //         bg={bgColor}
+       
         borderRadius="full"
         rounded="full"
       >
-        <FaArrowUp />
-      </Button>
+        <FaArrowUp values={{size:'50%'}} />
+      </Button> */}
+      <IconContext.Provider value={{ color:colortxt,  background: buttonColor, }}>
+  <div  onClick={handleScrollToTop}
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "40px",
+    height: "40px",
+    borderRadius: "50%",
+   
+    cursor: "pointer",
+    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+    transition: "background-color 0.3s",
+  }}
+  >
+
+  <FaArrowUp />
+  </div>
+</IconContext.Provider>
+ 
     </Box>
+    </>
   );
 };
 
