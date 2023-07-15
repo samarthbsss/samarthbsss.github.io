@@ -122,7 +122,7 @@ import {
   Flex,
   Button,
 } from '@chakra-ui/react';
-import React from 'react';
+import React,{useState} from 'react';
 import { FiGithub, FiEye } from 'react-icons/fi';
 import data from '../Json/project.json';
 
@@ -132,14 +132,23 @@ const Projects = () => {
   const bgColor = useColorModeValue('light.bg', 'nav.bg');
   const textColor = useColorModeValue('light.text', 'dark.text');
   const primeColor = useColorModeValue('light.primary', 'dark.primary');
-  const buttonColor = useColorModeValue('light.bg','white' )
+  const buttonColor = useColorModeValue('light.bg','white' );
+
+  const [hoveredIndex, setHoveredIndex] = useState(-1);
+  const handleMouseEnter = (index) => {
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(-1);
+  };
 
 
   return (
     <Box
       width="100%"
       height="90%"
-      p={2}
+      p='2rem'
       paddingBottom="5rem"
       boxShadow='xl'
       id="projects"
@@ -172,7 +181,11 @@ const Projects = () => {
             overflow="hidden"
             background={backDrop}
             boxShadow={"rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"}
-          
+            transform = {hoveredIndex === id ? 'scale(1.03)' : ''}
+            transition= {'transform 0.1s'}
+            onMouseEnter={() => handleMouseEnter(id)}
+        onMouseLeave={handleMouseLeave}
+        
           >
             <Image
               src={require(`../Projectimg/${card.image}`)}

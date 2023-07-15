@@ -1,15 +1,25 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {
   Heading, 
   Box,
-  
+ 
   useColorModeValue,
 } from '@chakra-ui/react';
+
 
 const TechStacks = () => {
   const bgColor = useColorModeValue('light.bg', 'white');
   const primeColor =useColorModeValue('white','#1F1F1F');
   const backDrop =useColorModeValue('#F9F9F9','#1F1F1F');
+
+  const [hoveredIndex, setHoveredIndex] = useState(-1);
+  const handleMouseEnter = (index) => {
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(-1);
+  };
 
   const techStacks = [
     { name: 'HTML', imageSrc: 'https://img.icons8.com/color/512/html-5--v1.png' },
@@ -42,7 +52,9 @@ const TechStacks = () => {
   }}
 >
   <Heading as="h2" size="2xl" textAlign="center" mb={12} color={bgColor}>
+  
     Relevant Tech Stacks
+   
   </Heading>
   <div
     style={{
@@ -52,7 +64,7 @@ const TechStacks = () => {
       justifyContent: "center",
     }}
   >
-    {techStacks.map(({ name, imageSrc }) => (
+    {techStacks.map(({ name, imageSrc },index) => (
       <div
         key={name}
         style={{
@@ -64,9 +76,15 @@ const TechStacks = () => {
           borderRadius: "8px",
           boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
           marginBottom: "20px",
-          background:primeColor
+          background:primeColor,
+          // newever change
+          // background: hoveredIndex === index ? primeColor : '',
+          transform: hoveredIndex === index ? 'scale(1.2)' : '',
+          transition: 'transform 0.5s',
         }}
         className="skills-card"
+        onMouseEnter={() => handleMouseEnter(index)}
+        onMouseLeave={handleMouseLeave}
       >
         <img
           src={imageSrc}
