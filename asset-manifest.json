@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.1bbcafbb.css",
-    "main.js": "/static/js/main.4263bf65.js",
+    "main.js": "/static/js/main.1544c531.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
-    "static/media/ajio.png": "/static/media/ajio.036825596f7e287a40f3.png",
+    "static/media/ajio0.png": "/static/media/ajio0.036825596f7e287a40f3.png",
     "static/media/myntra1.png": "/static/media/myntra1.a4a38132c5ed8b959b35.png",
     "static/media/spotify1.png": "/static/media/spotify1.50a3399f65d73cf42cca.png",
     "static/media/Samarth-B-S-Resume.pdf": "/static/media/Samarth-B-S-Resume.243fe167d7af29ba4655.pdf",
-    "static/media/spotify.png": "/static/media/spotify.159ee38f41dfbc5e80f1.png",
+    "static/media/spotify0.png": "/static/media/spotify0.159ee38f41dfbc5e80f1.png",
     "static/media/myntra3.png": "/static/media/myntra3.bff72fdac2926e5df44b.png",
     "static/media/ajio1.png": "/static/media/ajio1.e3053ed6392565c64bd4.png",
     "static/media/myntra2.png": "/static/media/myntra2.ef1657bafd41d15dff28.png",
@@ -22,11 +22,11 @@
     "static/media/logo.svg": "/static/media/logo.314a949b75516e3aca4aeb6467362e8d.svg",
     "index.html": "/index.html",
     "main.1bbcafbb.css.map": "/static/css/main.1bbcafbb.css.map",
-    "main.4263bf65.js.map": "/static/js/main.4263bf65.js.map",
+    "main.1544c531.js.map": "/static/js/main.1544c531.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1bbcafbb.css",
-    "static/js/main.4263bf65.js"
+    "static/js/main.1544c531.js"
   ]
 }
